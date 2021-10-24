@@ -1,0 +1,207 @@
+/*
+
+File structure:
+1. Fonts
+2. Default rules
+3. .......
+
+*/
+
+
+// [1] Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+// font-family: 'Roboto', sans-serif;
+
+@font-face {
+    font-family: Galano Grotesque;
+    src: url("../fonts/Heading.otf") format("opentype");
+}
+
+// [2] Default rules
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Galano Grotesque';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+}
+
+.content {
+    width: 1088px;
+    margin: 0 auto;
+}
+
+// Header
+header {
+    display: flex;
+    padding: 16px 12px;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: stretch;
+
+    a {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.menu-link {
+    color: #343C6A;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: .1s;
+    position: relative;
+
+    &:hover {
+        color: #222A5A;
+
+        span:before {
+            height: 50%;
+        }
+    }
+
+    span:before {
+        content: "";
+        position: absolute;
+        left: 14px;
+        bottom: 0;
+        display: block;
+        width: calc(100% - 40px + 12px);
+        height: 0;
+        background: #EDECFF;
+        z-index: -1;
+        transition: .05s;
+    }
+}
+
+.btn--contact-us {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #222A5A;
+    border-radius: 8px;
+    border: 0;
+    font-variant: small-caps;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: white;
+    cursor: pointer;
+    transition: .1s;
+
+    &:hover {
+        background: #EDECFF;
+        color: #222A5A;
+    }
+}
+
+// Intro section
+.intro-section {
+    position: relative;
+    padding: 164px 12px 169px 12px;
+    background: url("../images/backgrounds/intro-bg.jpg");
+    background-size: cover;
+
+    &::before {
+        content: "";
+        width: 36px;
+        height: 36px;
+        background: url("../images/icons/scroll-white.svg");
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        bottom: 19px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+.intro__text {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: 0.2px;
+        color: white;
+    }
+
+    p {
+        max-width: 445px;
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 137%;
+        color: white;
+    }
+
+    .btn--quote {
+        margin-top: 93px;
+    }
+}
+
+.btn--quote {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    padding: 16px 24px;
+    font-size: 16px;
+    line-height: 112%;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background: #222A5A;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    transition: .1s;
+    
+    svg {
+        margin-left: 8px;
+    }
+
+    &:hover {
+        background: #EDECFF;
+        color: #222A5A;
+
+        svg path {
+            fill: #222A5A;
+        }
+    }
+}

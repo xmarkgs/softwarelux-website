@@ -1,0 +1,248 @@
+/*
+
+File structure:
+1. Fonts
+2. Default rules
+3. .......
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: Galano Grotesque;
+  src: url("../fonts/Heading.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Galano Grotesque';
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+}
+
+.content {
+  width: 1088px;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 12px;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.header__nav a {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menu-link {
+  color: #343C6A;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-transition: .1s;
+  transition: .1s;
+  position: relative;
+}
+
+.menu-link:hover {
+  color: #222A5A;
+}
+
+.menu-link:hover span:before {
+  height: 50%;
+}
+
+.menu-link span:before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+  display: block;
+  width: calc(100% - 40px + 12px);
+  height: 0;
+  background: #EDECFF;
+  z-index: -1;
+  -webkit-transition: .05s;
+  transition: .05s;
+}
+
+.btn--contact-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  background: #222A5A;
+  border-radius: 8px;
+  border: 0;
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.btn--contact-us:hover {
+  background: #EDECFF;
+  color: #222A5A;
+}
+
+.intro-section {
+  position: relative;
+  padding: 164px 12px 169px 12px;
+  background: url("../images/backgrounds/intro-bg.jpg");
+  background-size: cover;
+}
+
+.intro-section::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: url("../images/icons/scroll-white.svg");
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  bottom: 19px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.intro__text {
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.intro__text h1 {
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+  color: white;
+}
+
+.intro__text p {
+  max-width: 445px;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 137%;
+  color: white;
+}
+
+.intro__text .btn--quote {
+  margin-top: 93px;
+}
+
+.btn--quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 112%;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  background: #222A5A;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.btn--quote svg {
+  margin-left: 8px;
+}
+
+.btn--quote:hover {
+  background: #EDECFF;
+  color: #222A5A;
+}
+
+.btn--quote:hover svg path {
+  fill: #222A5A;
+}
+/*# sourceMappingURL=main.css.map */
