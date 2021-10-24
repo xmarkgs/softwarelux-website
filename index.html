@@ -21,7 +21,7 @@
     </div>
 
     <!-- Page -->
-    <header>
+    <header class="header--top">
         <div class="content header__content">
             <img src="images/softwarelux_logo.svg" alt="" class="website-logo">
             <nav class="header__nav">
@@ -52,23 +52,29 @@
                         </svg>
                     </button>
                 </div>
+                <a href="#scroll-down" class="scroll-down" id="scroll-down"></a>
             </div>
         </section>
         <section class="services-section">
             <div class="content services-section__content">
                 <h1 class="section__title">services we offer</h1>
                 <div class="services-section__table">
-                    <img src="images/services-we-offer-image.svg" alt="">
+                    <div class="services__images">
+                        <img class="services__image active-service" src="images/services-we-offer-image.svg" alt="" data-id="1">
+                        <img class="services__image" src="images/services-web-dev.svg" alt="" data-id="2">
+                        <img class="services__image" src="images/Consulting.svg" alt="" data-id="3">
+                        <img class="services__image" src="images/Teamwork.svg" alt="" data-id="4">
+                    </div>
                     <div class="services__list">
                         <div class="services__item">
-                            <a href="#">Mobile development</a>
+                            <span data-id="1">Mobile development</span>
                             <p>
                                 Quickly win new customers with minimum effort via mobile devices by combining flawless
                                 design with the superior technical solutions.
                             </p>
                         </div>
                         <div class="services__item">
-                            <a href="#">Web Development</a>
+                            <span data-id="2">Web Development</span>
                             <p>
                                 We bring both our engineering skills and business touch to build fully responsive and
                                 intuitive web applications/portals to provide broad functional capacity to enterprises,
@@ -76,17 +82,17 @@
                             </p>
                         </div>
                         <div class="services__item">
-                            <a href="#">IT Consulting</a>
+                            <span data-id="3">IT Consulting</span>
                             <p>
                                 Muster our top brainpower to implement a successful digital transformation for the
                                 competitive advantage of your enterprise.
                             </p>
                         </div>
                         <div class="services__item">
-                            <a href="#">Mobile development</a>
+                            <span data-id="4">Dedicated Team</span>
                             <p>
-                                Quickly win new customers with minimum effort via mobile devices by combining flawless
-                                design with the superior technical solutions.
+                                Quicky and easily scale your engineering capacity while saving time and money with the
+                                help of our highly skilled software development team.
                             </p>
                         </div>
                     </div>

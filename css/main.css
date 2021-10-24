@@ -28,6 +28,7 @@ File structure:
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -75,10 +76,18 @@ main {
 }
 
 header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 16px 12px;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header__content {
@@ -178,15 +187,50 @@ header {
   color: #222A5A;
 }
 
-.intro-section {
-  position: relative;
-  padding: 164px 12px 169px 12px;
-  background: url("../images/backgrounds/intro-bg.jpg");
-  background-size: cover;
+.header--top {
+  -webkit-box-shadow: 0 0 0 transparent;
+          box-shadow: 0 0 0 transparent;
+  background: transparent;
 }
 
-.intro-section::before {
-  content: "";
+.header--top .website-logo {
+  -webkit-filter: invert();
+          filter: invert();
+}
+
+.header--top .menu-link {
+  color: white;
+}
+
+.header--top .menu-link span::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header--top .menu-link:hover {
+  color: white;
+}
+
+.intro-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 12px;
+  background: url("../images/backgrounds/intro-bg.jpg");
+  background-size: cover;
+  min-height: 500px;
+  height: 100vh;
+}
+
+.scroll-down {
+  position: absolute;
   width: 36px;
   height: 36px;
   background: url("../images/icons/scroll-white.svg");
@@ -308,6 +352,24 @@ header {
           justify-content: space-between;
 }
 
+.services__images {
+  position: relative;
+}
+
+.services__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: .05s;
+  transition: .05s;
+}
+
+.active-service {
+  position: relative;
+  opacity: 1;
+}
+
 .services__list {
   max-width: 406px;
   display: -webkit-box;
@@ -327,7 +389,7 @@ header {
   margin-top: 37px;
 }
 
-.services__item a {
+.services__item span {
   position: relative;
   font-family: "Galano Grotesque";
   text-decoration: none;
@@ -335,9 +397,10 @@ header {
   line-height: 100%;
   font-weight: bold;
   color: #373F41;
+  cursor: pointer;
 }
 
-.services__item a::before {
+.services__item span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -349,7 +412,7 @@ header {
   background: #373F41;
 }
 
-.services__item a:hover::before {
+.services__item span:hover::before {
   height: 2px;
 }
 

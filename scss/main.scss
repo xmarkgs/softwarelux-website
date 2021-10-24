@@ -34,6 +34,7 @@ File structure:
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -70,8 +71,15 @@ main {
 
 // [3] Header
 header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 10;
     display: flex;
     padding: 16px 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0, 0.08);
 }
 
 .header__content {
@@ -148,26 +156,52 @@ header {
     }
 }
 
+.header--top {
+    box-shadow: 0 0 0 transparent;
+    background: transparent; 
+
+    .website-logo {
+        filter: #{"invert()"};
+    }   
+
+    .menu-link {
+        color: white;
+
+        span::before {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
 // [4] Intro section
 .intro-section {
     position: relative;
-    padding: 164px 12px 169px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12px;
     background: url("../images/backgrounds/intro-bg.jpg");
     background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+}
 
-    &::before {
-        content: "";
-        width: 36px;
-        height: 36px;
-        background: url("../images/icons/scroll-white.svg");
-        background-size: contain;
-        background-position: center;
-        position: absolute;
-        bottom: 19px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
+.scroll-down {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url("../images/icons/scroll-white.svg");
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 19px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .intro__text {
@@ -227,7 +261,7 @@ header {
     }
 }
 
-// Service we offer section
+// [5] Service we offer section
 .services-section {
     padding: 80px 12px 92px 12px;
     background: #F5F7FD;
@@ -258,6 +292,23 @@ header {
     justify-content: space-between;
 }
 
+.services__images {
+    position: relative;
+}
+
+.services__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .05s;
+}
+
+.active-service {
+    position: relative;
+    opacity: 1;
+}
+
 .services__list {
     max-width: 406px;
     display: flex;
@@ -273,7 +324,7 @@ header {
         margin-top: 37px;
     }
 
-    a {
+    span {
         position: relative;
         font-family: "Galano Grotesque";
         text-decoration: none;
@@ -281,6 +332,7 @@ header {
         line-height: 100%;
         font-weight: bold;
         color: #373F41;
+        cursor: pointer;
 
         &::before {
             content: "";
@@ -992,7 +1044,7 @@ footer {
     left: 0;
     right: 0;
     position: fixed;
-    background: rgba(0,0,0, 0.55);
+    background: rgba(0, 0, 0, 0.55);
     display: none;
     justify-content: center;
     align-items: center;
@@ -1014,7 +1066,7 @@ footer {
     padding: 24px 64px 34px 64px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 0 32px 0px rgba(0,0,0, 0.29);
+    box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.29);
 }
 
 .modal__title {
