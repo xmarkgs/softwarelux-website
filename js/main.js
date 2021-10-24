@@ -28,9 +28,37 @@ $(document).ready(() => {
     });
 
     // [2] Services change image
+    let currentImage = 1;
+    let imageChangedRecently = false;
+
+    function changeImages() {
+        let services = document.querySelectorAll('.services__image');
+
+        setInterval(() => {
+            console.log(imageChangedRecently);
+            if (!imageChangedRecently) {
+                for (let image of services) {
+                    image.classList.remove('active-service');
+                }
+    
+                let changeTo;
+                if (+currentImage >= 4) {
+                    changeTo = 1;
+                } else {
+                    changeTo = +currentImage + 1;
+                }
+    
+                $(`.services__image[data-id="${changeTo}"]`).addClass('active-service');
+                currentImage = changeTo;
+            }            
+        }, 5000);
+    }
+    changeImages();
+
     $('.services__item span').hover((event) => {
         let services = document.querySelectorAll('.services__image');
         let showService = event.target.dataset.id;
+        currentImage = showService;
 
         for (let image of services) {
             if (image.dataset.id === showService) {
@@ -39,6 +67,11 @@ $(document).ready(() => {
                 image.classList.remove('active-service');
             }
         }
+
+        imageChangedRecently = true;
+        setTimeout(() => {
+            imageChangedRecently = false;
+        }, 5000);
     });
 
     // [3] Contact us modal
