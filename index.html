@@ -6,11 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>softwarelux</title>
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Website styles -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="contact-us-modal">
+        <div class="contact-us-modal__content">
+            <h1 class="modal__title">contact us</h1>
+        </div>
+    </div>
+
+    <!-- Page -->
     <header>
         <div class="content header__content">
             <img src="images/softwarelux_logo.svg" alt="" class="website-logo">
@@ -20,7 +30,7 @@
                 <a href="" class="menu-link"><span>Industries</span></a>
                 <a href="" class="menu-link"><span>Technologies</span></a>
                 <a href="" class="menu-link"><span>Insights</span></a>
-                <button class="btn--contact-us">contact us</button>
+                <button class="btn--contact-us openContactModal">contact us</button>
             </nav>
         </div>
     </header>
@@ -33,7 +43,7 @@
                         We are passionate not just about software development, but solutions for optimizing and growing
                         your business.
                     </p>
-                    <button class="btn--quote">
+                    <button class="btn--quote openContactModal">
                         <span>get a quote</span>
                         <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -44,12 +54,469 @@
                 </div>
             </div>
         </section>
+        <section class="services-section">
+            <div class="content services-section__content">
+                <h1 class="section__title">services we offer</h1>
+                <div class="services-section__table">
+                    <img src="images/services-we-offer-image.svg" alt="">
+                    <div class="services__list">
+                        <div class="services__item">
+                            <a href="#">Mobile development</a>
+                            <p>
+                                Quickly win new customers with minimum effort via mobile devices by combining flawless
+                                design with the superior technical solutions.
+                            </p>
+                        </div>
+                        <div class="services__item">
+                            <a href="#">Web Development</a>
+                            <p>
+                                We bring both our engineering skills and business touch to build fully responsive and
+                                intuitive web applications/portals to provide broad functional capacity to enterprises,
+                                their customers and partners.
+                            </p>
+                        </div>
+                        <div class="services__item">
+                            <a href="#">IT Consulting</a>
+                            <p>
+                                Muster our top brainpower to implement a successful digital transformation for the
+                                competitive advantage of your enterprise.
+                            </p>
+                        </div>
+                        <div class="services__item">
+                            <a href="#">Mobile development</a>
+                            <p>
+                                Quickly win new customers with minimum effort via mobile devices by combining flawless
+                                design with the superior technical solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="how-work-section wow fadeInUp">
+            <div class="content how-work-section__content">
+                <h1 class="section__title">how we work</h1>
+                <div class="how-work__scheme">
+                    <div class="scheme__col scheme__col--left">
+                        <a href="#" class="scheme__item" data-id="1">
+                            <img src="images/icons/analysis.svg" alt="">
+                            <h3>analysis</h3>
+                            <p>
+                                At this step, we gather your ideas and business requirements to turn them into a defined
+                                and accurate concept of your software that suits your goals and preferred budget.
+                            </p>
+                            <div class="scheme__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <div class="scheme__item__node">
+                                <div class="scheme__item__node__rope"></div>
+                                <div class="scheme__item__node__anchor"></div>
+                            </div>
+                        </a>
+                        <a href="#" class="scheme__item" data-id="3">
+                            <img src="images/icons/development.svg" alt="">
+                            <h3>development</h3>
+                            <p>
+                                We manage the coding process in an Agile or waterfall sprint format and regularly report
+                                to you on the progress. We ensure our software quality with minimum bugs monitor risks.
+                            </p>
+                            <div class="scheme__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <div class="scheme__item__node">
+                                <div class="scheme__item__node__rope"></div>
+                                <div class="scheme__item__node__anchor"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="scheme__col scheme__col--right">
+                        <a href="#" class="scheme__item" data-id="2">
+                            <img src="images/icons/design.svg" alt="">
+                            <h3>design</h3>
+                            <p>
+                                Based on your business goals and your targeted users' needs we create a product
+                                prototype to give you an idea of how the application looks and works.
+                            </p>
+                            <div class="scheme__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <div class="scheme__item__node">
+                                <div class="scheme__item__node__rope"></div>
+                                <div class="scheme__item__node__anchor"></div>
+                            </div>
+                        </a>
+                        <a href="#" class="scheme__item" data-id="4">
+                            <img src="images/icons/support.svg" alt="">
+                            <h3>support</h3>
+                            <p>
+                                Our team will help you make the product available to users and resolve any issues that
+                                may arise in real-life operations. Also, we can embody additional features in future
+                                releases.
+                            </p>
+                            <div class="scheme__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <div class="scheme__item__node">
+                                <div class="scheme__item__node__rope"></div>
+                                <div class="scheme__item__node__anchor"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="for-whom-section">
+            <div class="content--slider for-whom-section__content">
+                <h1 class="section__title">for whom</h1>
+                <div class="for-whom__carousel" id="forWhomCarousel">
+                    <div class="for-whom__item">
+                        <div class="for-whom__info">
+                            <div class="for-whom__tag">
+                                <img src="images/icons/shuttle.svg" alt="">
+                                <h4>Startups</h4>
+                            </div>
+                            <div class="for-whom__text">
+                                <h3>
+                                    Got an idea but not sure where to start?
+                                </h3>
+                                <p>
+                                    We are your development partner to deliver your ultimate solution. We will help you
+                                    to define and shape your purpose into a detailed vision and to elaborate your
+                                    business requirements in order to develop the MVP.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="images/for-whom-startup.svg" alt="" class="for-whom__image">
+                    </div>
+                    <div class="for-whom__item">
+                        <div class="for-whom__info">
+                            <div class="for-whom__tag">
+                                <img src="images/icons/money-bag.svg" alt="">
+                                <h4>Existing Businesses</h4>
+                            </div>
+                            <div class="for-whom__text">
+                                <h3>
+                                    Do you want to benefit from the best technology strategies to help you manage your
+                                    growth?
+                                </h3>
+                                <p>
+                                    We will help you to implement custom systems for your rapidly growing business so
+                                    that you won’t have to pay for the functionality you are not using.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="images/for-whom-business.svg" alt="" class="for-whom__image">
+                    </div>
+                    <div class="for-whom__item">
+                        <div class="for-whom__info">
+                            <div class="for-whom__tag">
+                                <img src="images/icons/change-management.svg" alt="">
+                                <h4>Product Transition</h4>
+                            </div>
+                            <div class="for-whom__text">
+                                <h3>
+                                    You are using a decade-old functionality with an old technology stack, which is
+                                    time-consuming and expensive to maintain?
+                                </h3>
+                                <p>
+                                    We are ready to help you emigrate to new frameworks and improve the techno-stack in
+                                    order to optimize, automate and scale your business.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="images/for-whom-transition.svg" alt="" class="for-whom__image">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="resources-section">
+            <div class="content resources-section__content">
+                <h1 class="section__title">
+                    Looking for a dedicated pool of technical resources for your software development?
+                </h1>
+                <p class="resources__description">
+                    Quicky and easily scale your engineering capacity while saving time and money with the help of our
+                    highly skilled software development team.
+                    <br><br>
+                    Our lean startup methodology, our proprietary tools, our app frameworks and our 500,000+ manhours of
+                    design and development experience are at your beck and call.
+                </p>
+                <div class="resources__list">
+                    <div class="resources__col">
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Predictable performance and quality
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Capabilities and Technological Expertise
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Reliable service delivery
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Pricing transparency and SLA flexibility
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Fast development while retaining application stability
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Self-management by objectives
+                            </span>
+                        </div>
+                    </div>
+                    <div class="resources__col">
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Clear documentation and knowledge base
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                KPI-controlled projects
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Mature quality management system
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Assured safety of the customers’ data
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Effective communication models
+                            </span>
+                        </div>
+                        <div class="resources__item">
+                            <div class="resources__marker"></div>
+                            <span>
+                                Fast recruitment
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="industries-section">
+            <div class="content industries-section__content">
+                <h1 class="section__title">
+                    industries
+                </h1>
+                <div class="industries__table">
+                    <a href="#" class="industries__item">
+                        <div class="industry__preview">
+                            <h2>E-commerce</h2>
+                        </div>
+                        <div class="industry__text">
+                            <div class="industry__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <p>
+                                Grow your income through customer-focused products that offer impeccable individualized
+                                buying experiences. The combination of our eCommerce development and tech expertise will
+                                ensure a boost to your sales and increase your audiences.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="industries__item">
+                        <div class="industry__preview">
+                            <h2>Education</h2>
+                        </div>
+                        <div class="industry__text">
+                            <div class="industry__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <p>
+                                Custom eLearning development will help you transform your learning concepts into
+                                user-centric, engaging, and concise online education platforms and keep in step with the
+                                rise in eLearning.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="industries__item">
+                        <div class="industry__preview">
+                            <h2>Healthcare</h2>
+                        </div>
+                        <div class="industry__text">
+                            <div class="industry__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <p>
+                                We serve healthcare by applying technologies that will help you simplify the lives of
+                                your patients by launching highly secured, reliable, and evidence-based online services.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="industries__item">
+                        <div class="industry__preview">
+                            <h2>Fintech</h2>
+                        </div>
+                        <div class="industry__text">
+                            <div class="industry__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <p>
+                                Make your customers' financial services experience irritation-free with the power of
+                                digital transformation to your digital banking, fiscal planning, or management
+                                platforms.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="technologies-section">
+            <div class="content technologies-section__content">
+                <h1 class="section__title">
+                    technologies
+                </h1>
+                <div class="technologies__table">
+                    <div class="technologies__categories">
+                        <div class="technologies__category">
+                            Cloud
+                        </div>
+                        <div class="technologies__category">
+                            Internet of Things
+                        </div>
+                        <div class="technologies__category">
+                            Virtual reality
+                        </div>
+                        <div class="technologies__category">
+                            Data science
+                        </div>
+                        <div class="technologies__category">
+                            Computer Vision
+                        </div>
+                        <div class="technologies__category">
+                            Big Data
+                        </div>
+                        <div class="technologies__category">
+                            Artificial Intelligence
+                        </div>
+                        <div class="technologies__category">
+                            Blockchain
+                        </div>
+                    </div>
+                    <div class="technologies__view">
+                        <div class="technologies__list">
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/cib_java.svg" alt="">
+                                </div>
+                                <span>Java</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/cib_dot-net.svg" alt="">
+                                </div>
+                                <span>.NET</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/go.svg" alt="">
+                                </div>
+                                <span>Golang</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/python.svg" alt="">
+                                </div>
+                                <span>Python</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/bx_bxl-nodejs.svg" alt="">
+                                </div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/akar-icons_react-fill.svg" alt="">
+                                </div>
+                                <span>React Native</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/cplusplus-dark.svg" alt="">
+                                </div>
+                                <span>C++</span>
+                            </div>
+                            <div class="technologies__item">
+                                <div class="technology__icon">
+                                    <img src="images/icons/technologies/akar-icons_javascript-fill.svg" alt="">
+                                </div>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <div class="connect-experts">
+        <h1>connect with our experts</h1>
+        <button class="btn--touch openContactModal">
+            <span>get in touch</span>
+            <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                    fill="white" />
+            </svg>
+        </button>
+    </div>
     <footer>
-        <div class="content">
-            <h3>footer</h3>
+        <div class="content footer__content">
+            <div class="footer__top">
+                <img src="images/softwarelux_logo.svg" alt="" class="website-logo">
+                <nav class="header__nav">
+                    <a href="" class="menu-link"><span>Services</span></a>
+                    <a href="" class="menu-link"><span>How we work</span></a>
+                    <a href="" class="menu-link"><span>Industries</span></a>
+                    <a href="" class="menu-link"><span>Technologies</span></a>
+                    <a href="" class="menu-link"><span>Insights</span></a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p>Copyright &copy; 2021 SoftwareLux</p>
+                <a href="mailto:email@softwarelux.com">email@softwarelux.com</a>
+            </div>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Slick carousel -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
