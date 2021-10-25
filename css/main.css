@@ -1289,13 +1289,21 @@ footer {
 }
 
 .contact-us-modal__content {
-  min-width: 528px;
+  position: relative;
+  max-width: 528px;
   min-height: 100px;
   padding: 24px 64px 34px 64px;
   background: white;
   border-radius: 12px;
   -webkit-box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.29);
           box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.29);
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -1306,5 +1314,254 @@ footer {
   font-weight: bold;
   text-align: center;
   color: #373F41;
+}
+
+.modal__description {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 137%;
+  text-align: center;
+  color: #373F41;
+}
+
+.contact-us-modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px;
+}
+
+.contact-us-modal__form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.contact-us-modal__form label span {
+  color: #373F41;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.contact-us-modal__form label input[type="text"],
+.contact-us-modal__form label input[type="email"] {
+  font-size: 16px;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  color: #373F41;
+  border: 0;
+  outline: 1px solid #DADADA;
+  -webkit-transition: .05s;
+  transition: .05s;
+}
+
+.contact-us-modal__form label input[type="text"]::-webkit-input-placeholder,
+.contact-us-modal__form label input[type="email"]::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label input[type="text"]:-ms-input-placeholder,
+.contact-us-modal__form label input[type="email"]:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label input[type="text"]::-ms-input-placeholder,
+.contact-us-modal__form label input[type="email"]::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label input[type="text"]::placeholder,
+.contact-us-modal__form label input[type="email"]::placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label input[type="text"]:focus,
+.contact-us-modal__form label input[type="email"]:focus {
+  border: 0;
+  outline: 2px solid #9E99E3;
+}
+
+.contact-us-modal__form label textarea {
+  font-size: 16px;
+  min-height: 82px;
+  max-height: 140px;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  color: #373F41;
+  border: 0;
+  outline: 1px solid #DADADA;
+  -webkit-transition: .05s;
+  transition: .05s;
+  resize: vertical;
+}
+
+.contact-us-modal__form label textarea::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label textarea:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label textarea::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label textarea::placeholder {
+  color: #bdbdbd;
+}
+
+.contact-us-modal__form label textarea:focus {
+  border: 0;
+  outline: 2px solid #9E99E3;
+}
+
+.contact-us-modal__form .checkbox-label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin-top: 8px;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.contact-us-modal__form .checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contact-us-modal__form .checkbox-label .checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  margin: 0;
+  border-radius: 4px;
+  border: 2px solid #BDBDBD;
+  -webkit-transition: .05s;
+  transition: .05s;
+}
+
+.contact-us-modal__form .checkbox-label input:hover ~ .checkmark {
+  background-color: #BDBDBD;
+}
+
+.contact-us-modal__form .checkbox-label input:checked ~ .checkmark {
+  border: 2px solid #9E99E3;
+  background-color: #9E99E3;
+}
+
+.contact-us-modal__form .checkbox-label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contact-us-modal__form .checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.contact-us-modal__form .checkbox-label .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.contact-us-modal__form .checkbox-label p {
+  margin-left: 26px;
+  font-size: 16px;
+  line-height: 137%;
+  color: black;
+}
+
+.contact-us-modal__form p {
+  font-size: 16px;
+  line-height: 137%;
+  color: #373F41;
+}
+
+.contact-us-modal__form .form__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 32px;
+}
+
+.contact-us-modal__form .form__buttons #cancelForm {
+  background: transparent;
+  border: 2px solid #373F41;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 112%;
+  color: #373F41;
+  text-transform: uppercase;
+  -webkit-transition: .05s;
+  transition: .05s;
+  cursor: pointer;
+}
+
+.contact-us-modal__form .form__buttons #cancelForm:hover {
+  background: #373F41;
+  color: white;
+}
+
+.contact-us-modal__form .form__buttons #sendForm {
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 112%;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: .05s;
+  transition: .05s;
+  border: 0;
+}
+
+.contact-us-modal__form .form__buttons #sendForm:disabled {
+  background: #CACEEA;
 }
 /*# sourceMappingURL=main.css.map */

@@ -16,7 +16,42 @@
     <!-- Modal -->
     <div class="contact-us-modal">
         <div class="contact-us-modal__content">
+            <div class="modal-close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 1.61143L14.3886 0L8 6.38857L1.61143 0L0 1.61143L6.38857 8L0 14.3886L1.61143 16L8 9.61143L14.3886 16L16 14.3886L9.61143 8L16 1.61143Z"
+                        fill="#151F2B" />
+                </svg>
+            </div>
             <h1 class="modal__title">contact us</h1>
+            <p class="modal__description">
+                Reach out to us for a free project call. Let’s discuss your idea and turn it into an amazing digital
+                product.
+            </p>
+            <form class="contact-us-modal__form">
+                <label>
+                    <span>Full Name</span>
+                    <input type="text" placeholder="Type here" name="name">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" placeholder="Type here" name="email">
+                </label>
+                <label>
+                    <span>Message</span>
+                    <textarea name="message" placeholder="Type here"></textarea>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="privacy">
+                    <span class="checkmark"></span>
+                    <p>I have read and accepted the Privacy Policy</p>
+                </label>
+                <p>We`ll get back to you within 24 business hours.</p>
+                <div class="form__buttons">
+                    <button id="cancelForm">cancel</button>
+                    <button disabled id="sendForm">send message</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -60,7 +95,8 @@
                 <h1 class="section__title">services we offer</h1>
                 <div class="services-section__table">
                     <div class="services__images">
-                        <img class="services__image active-service" src="images/services-we-offer-image.svg" alt="" data-id="1">
+                        <img class="services__image active-service" src="images/services-we-offer-image.svg" alt=""
+                            data-id="1">
                         <img class="services__image" src="images/services-web-dev.svg" alt="" data-id="2">
                         <img class="services__image" src="images/Consulting.svg" alt="" data-id="3">
                         <img class="services__image" src="images/Teamwork.svg" alt="" data-id="4">

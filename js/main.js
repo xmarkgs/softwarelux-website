@@ -35,22 +35,21 @@ $(document).ready(() => {
         let services = document.querySelectorAll('.services__image');
 
         setInterval(() => {
-            console.log(imageChangedRecently);
             if (!imageChangedRecently) {
                 for (let image of services) {
                     image.classList.remove('active-service');
                 }
-    
+
                 let changeTo;
                 if (+currentImage >= 4) {
                     changeTo = 1;
                 } else {
                     changeTo = +currentImage + 1;
                 }
-    
+
                 $(`.services__image[data-id="${changeTo}"]`).addClass('active-service');
                 currentImage = changeTo;
-            }            
+            }
         }, 5000);
     }
     changeImages();
@@ -76,6 +75,12 @@ $(document).ready(() => {
 
     // [3] Contact us modal
     $('.openContactModal').click(() => {
+        function hideModal() {
+            $('body').removeClass('no-scroll');
+            $('.contact-us-modal').removeClass('active');
+            $('.contact-us-modal').removeClass('changeModalOpacity');
+        }
+
         $('body').addClass('no-scroll');
         $('.contact-us-modal').addClass('active');
         setTimeout(() => {
@@ -83,13 +88,24 @@ $(document).ready(() => {
         }, 10);
 
         $('.contact-us-modal').click(() => {
-            $('body').removeClass('no-scroll');
-            $('.contact-us-modal').removeClass('active');
-            $('.contact-us-modal').removeClass('changeModalOpacity');
+            hideModal();
         });
 
         $('.contact-us-modal__content').click((event) => {
             event.stopPropagation();
+        });
+
+        $('.modal-close').click((event) => {
+            hideModal();
+        });
+
+        $('#cancelForm').click((event) => {
+            event.preventDefault();
+
+            $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
+            $('.contact-us-modal__form input[type="checkbox"]').prop("checked", false);
+
+            hideModal();
         });
     });
 
