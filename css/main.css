@@ -183,7 +183,6 @@ header {
 
 .btn--contact-us:hover {
   background: #E6EBFA;
-  outline: 1px solid #222A5A;
   color: #222A5A;
 }
 
@@ -304,7 +303,6 @@ header {
 .btn--quote:hover {
   background: #EDECFF;
   color: #222A5A;
-  outline: 2px solid #222A5A;
 }
 
 .btn--quote:hover svg path {
@@ -397,11 +395,12 @@ header {
   line-height: 100%;
   font-weight: bold;
   color: #373F41;
-  cursor: pointer;
+  cursor: default;
+  -webkit-transition: .05s;
+  transition: .05s;
 }
 
 .services__item span::before {
-  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -410,6 +409,10 @@ header {
   -webkit-transition: .05s;
   transition: .05s;
   background: #373F41;
+}
+
+.services__item span:hover {
+  background: #EDECFF;
 }
 
 .services__item span:hover::before {
@@ -768,7 +771,6 @@ header {
 }
 
 .for-whom__tag h4 {
-  margin-left: 8px;
   font-size: 32px;
   line-height: 156%;
   color: #373F41;
@@ -797,6 +799,26 @@ header {
   font-size: 20px;
   font-weight: 300;
   margin-top: 24px;
+}
+
+.for-whom__read-more {
+  margin-top: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  padding: 8px 12px;
+  color: #373F41;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+  -webkit-transition: .05s;
+  transition: .05s;
+  background: #EDECFF;
+}
+
+.for-whom__read-more:hover {
+  color: #222A5A;
 }
 
 .resources-section {
@@ -1084,6 +1106,10 @@ header {
   height: 80px;
 }
 
+.technology__icon.technology__icon--smaller img {
+  width: 80%;
+}
+
 .connect-experts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1352,6 +1378,10 @@ footer {
   margin-bottom: 6px;
 }
 
+.contact-us-modal__form label em {
+  color: red;
+}
+
 .contact-us-modal__form label input[type="text"],
 .contact-us-modal__form label input[type="email"] {
   font-size: 16px;
@@ -1564,4 +1594,3 @@ footer {
 .contact-us-modal__form .form__buttons #sendForm:disabled {
   background: #CACEEA;
 }
-/*# sourceMappingURL=main.css.map */

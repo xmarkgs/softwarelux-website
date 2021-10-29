@@ -151,7 +151,7 @@ header {
 
     &:hover {
         background: #E6EBFA;
-        outline: 1px solid #222A5A;
+        // outline: 1px solid #222A5A;
         color: #222A5A;
     }
 }
@@ -253,7 +253,7 @@ header {
     &:hover {
         background: #EDECFF;
         color: #222A5A;
-        outline: 2px solid #222A5A;
+        // outline: 2px solid #222A5A;
 
         svg path {
             fill: #222A5A;
@@ -332,10 +332,11 @@ header {
         line-height: 100%;
         font-weight: bold;
         color: #373F41;
-        cursor: pointer;
+        cursor: default;
+        transition: .05s;
 
         &::before {
-            content: "";
+            // content: "";
             position: absolute;
             left: 0;
             bottom: 0;
@@ -345,8 +346,12 @@ header {
             background: #373F41;
         }
 
-        &:hover::before {
-            height: 2px;
+        &:hover {
+            background: #EDECFF;
+
+            &::before {
+                height: 2px;
+            }
         }
     }
 
@@ -641,7 +646,7 @@ header {
     align-items: center;
 
     h4 {
-        margin-left: 8px;
+        // margin-left: 8px;
         font-size: 32px;
         line-height: 156%;
         color: #373F41;
@@ -665,6 +670,23 @@ header {
         font-size: 20px;
         font-weight: 300;
         margin-top: 24px;
+    }
+}
+
+.for-whom__read-more {
+    margin-top: 12px;
+    width: fit-content;
+    font-size: 12px;
+    padding: 8px 12px;
+    color: #373F41;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: .05s;
+    background: #EDECFF;
+
+    &:hover {
+        color: #222A5A;
     }
 }
 
@@ -896,6 +918,12 @@ header {
     align-items: center;
     width: 80px;
     height: 80px;
+
+    &.technology__icon--smaller {
+        img {
+            width: 80%;
+        }
+    }
 }
 
 // [11] Connect experts
@@ -1109,6 +1137,10 @@ footer {
             color: #373F41;
             font-weight: bold;
             margin-bottom: 6px;
+        }
+
+        em {
+            color: red;
         }
 
         input[type="text"],
