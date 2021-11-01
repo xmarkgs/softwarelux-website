@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 
 File structure:
@@ -825,15 +826,58 @@ header {
   padding: 42px 12px 80px 12px;
 }
 
+.resources-section__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .resources__description {
+  position: relative;
   max-width: 672px;
+  text-align: center;
   margin: 56px 0;
   font-weight: 300;
   font-size: 20px;
   color: #373F41;
 }
 
+.resources__description::before {
+  content: '“';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  font-size: 132px;
+  font-weight: bold;
+  color: #F0F0FB;
+}
+
+.resources__description::after {
+  content: '“';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  font-size: 132px;
+  font-weight: bold;
+  color: #F0F0FB;
+}
+
+.resources__title {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #373F41;
+  margin-bottom: 32px;
+}
+
 .resources__list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -843,7 +887,9 @@ header {
 }
 
 .resources__col {
+  position: relative;
   max-width: 50%;
+  padding: 24px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -851,6 +897,17 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.resources__col::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 2px;
+  height: 100%;
+  background: #CDCDCD;
+  z-index: -1;
 }
 
 .resources__item {
@@ -868,13 +925,22 @@ header {
 
 .resources__marker {
   margin-top: 4px;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background: #9E99E3;
+  border: 4px solid #EDECFF;
   border-radius: 100%;
   margin-right: 8px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.resources__divider {
+  margin-top: 12px;
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed #CDCDCD;
+  margin-right: 8px;
 }
 
 .industries-section {
