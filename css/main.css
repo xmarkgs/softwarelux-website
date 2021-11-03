@@ -143,19 +143,22 @@ header {
   color: #222A5A;
 }
 
-.menu-link:hover span:before {
-  height: 50%;
+.menu-link:hover span::before {
+  height: 2px;
 }
 
-.menu-link span:before {
+.menu-link span::before {
   content: "";
   position: absolute;
-  left: 14px;
-  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 4px;
   display: block;
-  width: calc(100% - 40px + 12px);
+  width: calc(100% - 40px + 10px);
   height: 0;
-  background: #EDECFF;
+  background: #222A5A;
+  border-radius: 100px;
   z-index: -1;
   -webkit-transition: .05s;
   transition: .05s;
@@ -168,23 +171,41 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px 12px;
-  background: #222A5A;
-  border-radius: 8px;
-  border: 0;
-  font-variant: small-caps;
-  font-weight: 500;
+  padding: 12px;
+  background: transparent;
+  border-radius: 4px;
+  border: 2px solid #222A5A;
+  font-weight: bold;
   font-size: 16px;
   line-height: 100%;
-  color: white;
+  color: #222A5A;
   cursor: pointer;
   -webkit-transition: .05s;
   transition: .05s;
 }
 
+.btn--contact-us svg {
+  margin-left: 8px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.btn--contact-us svg path {
+  fill: #222A5A;
+}
+
 .btn--contact-us:hover {
-  background: #E6EBFA;
-  color: #222A5A;
+  background: #222A5A;
+  color: white;
+}
+
+.btn--contact-us:hover svg {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+}
+
+.btn--contact-us:hover svg path {
+  fill: white;
 }
 
 .header--top {
@@ -203,11 +224,29 @@ header {
 }
 
 .header--top .menu-link span::before {
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
 }
 
 .header--top .menu-link:hover {
   color: white;
+}
+
+.header--top .btn--contact-us {
+  border: 2px solid white;
+  color: white;
+}
+
+.header--top .btn--contact-us svg path {
+  fill: white;
+}
+
+.header--top .btn--contact-us:hover {
+  background: white;
+  color: #222A5A;
+}
+
+.header--top .btn--contact-us:hover svg path {
+  fill: #222A5A;
 }
 
 .intro-section {
@@ -244,7 +283,7 @@ header {
 }
 
 .intro__text {
-  max-width: 640px;
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,16 +295,14 @@ header {
 
 .intro__text h1 {
   font-size: 56px;
-  line-height: 100%;
   letter-spacing: 0.2px;
   color: white;
 }
 
 .intro__text p {
-  max-width: 445px;
   margin-top: 40px;
-  font-size: 16px;
-  line-height: 137%;
+  font-size: 24px;
+  letter-spacing: 0.3px;
   color: white;
 }
 
@@ -299,11 +336,18 @@ header {
 
 .btn--quote svg {
   margin-left: 8px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .btn--quote:hover {
-  background: #EDECFF;
+  background: white;
   color: #222A5A;
+}
+
+.btn--quote:hover svg {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
 }
 
 .btn--quote:hover svg path {
@@ -402,22 +446,27 @@ header {
 }
 
 .services__item span::before {
+  content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  -webkit-transition: .05s;
-  transition: .05s;
-  background: #373F41;
+  right: calc(100% + 8px);
+  top: -6px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/icons/arrow-small-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: .1s;
+  transition: .1s;
+  opacity: 0;
 }
 
 .services__item span:hover {
-  background: #EDECFF;
+  color: #9E99E3;
 }
 
 .services__item span:hover::before {
-  height: 2px;
+  right: 100%;
+  opacity: 1;
 }
 
 .services__item p {
@@ -561,11 +610,6 @@ header {
 
 .scheme__item:hover::before {
   color: #9E99E3;
-}
-
-.scheme__item:hover .scheme__link {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .scheme__item:hover .scheme__item__node__anchor {
@@ -803,23 +847,51 @@ header {
 }
 
 .for-whom__read-more {
-  margin-top: 12px;
+  margin-top: 24px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 12px;
-  padding: 8px 12px;
-  color: #373F41;
-  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 112%;
+  color: white;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 6px;
-  -webkit-transition: .05s;
-  transition: .05s;
-  background: #EDECFF;
+  letter-spacing: 0.3px;
+  background: #222A5A;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.for-whom__read-more svg {
+  margin-left: 8px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .for-whom__read-more:hover {
+  background: white;
   color: #222A5A;
+}
+
+.for-whom__read-more:hover svg {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+}
+
+.for-whom__read-more:hover svg path {
+  fill: #222A5A;
 }
 
 .resources-section {
@@ -867,13 +939,6 @@ header {
   font-size: 132px;
   font-weight: bold;
   color: #F0F0FB;
-}
-
-.resources__title {
-  font-size: 32px;
-  text-transform: uppercase;
-  color: #373F41;
-  margin-bottom: 32px;
 }
 
 .resources__list {
@@ -979,11 +1044,6 @@ header {
 
 .industries__item:hover {
   outline: 4px solid #9E99E3;
-}
-
-.industries__item:hover .industry__link {
-  pointer-events: all;
-  opacity: 1;
 }
 
 .industries__item:nth-child(1) .industry__preview {
@@ -1234,6 +1294,8 @@ header {
 
 .btn--touch svg {
   margin-left: 8px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .btn--touch:hover {
@@ -1242,6 +1304,11 @@ header {
 
 .btn--touch:hover span {
   color: #373F41;
+}
+
+.btn--touch:hover svg {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
 }
 
 .btn--touch:hover svg path {
@@ -1297,11 +1364,14 @@ footer {
 }
 
 .footer__top .menu-link span::before {
-  background: rgba(123, 97, 255, 0.15);
+  background: #222A5A;
+  bottom: -2px;
 }
 
 .footer__top .menu-link:last-child span::before {
-  width: calc(100% - 20px + 12px);
+  width: calc(100% - 20px + 10px);
+  left: 15px;
+  margin: 0;
 }
 
 .footer__top .website-logo {

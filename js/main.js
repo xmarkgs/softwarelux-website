@@ -74,15 +74,37 @@ $(document).ready(() => {
     });
 
     // [3] Contact us modal
+    function getScrollbarWidth() {
+        var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+        $('body').append(div);
+        var w1 = $('div', div).innerWidth();
+        div.css('overflow-y', 'scroll');
+        var w2 = $('div', div).innerWidth();
+        $(div).remove();
+        return (w1 - w2);
+    }
+
+    function hideModal() {
+        changeScrollPadding(false);
+        $('body').removeClass('no-scroll');
+        $('.contact-us-modal').removeClass('active');
+        $('.contact-us-modal').removeClass('changeModalOpacity');
+    }
+
+    function changeScrollPadding(option) {
+        if (option) {
+            $('body').css('padding-right', `${getScrollbarWidth()}px`);
+            $('header').css('width', `calc(100% - ${getScrollbarWidth()}px)`);
+        } else {
+            $('body').css('padding-right', `0`);
+            $('header').css('width', `100%`);
+        }
+    }
+
     $('.openContactModal').click((event) => {
         event.preventDefault();
 
-        function hideModal() {
-            $('body').removeClass('no-scroll');
-            $('.contact-us-modal').removeClass('active');
-            $('.contact-us-modal').removeClass('changeModalOpacity');
-        }
-
+        changeScrollPadding(true);
         $('body').addClass('no-scroll');
         $('.contact-us-modal').addClass('active');
         setTimeout(() => {
@@ -100,15 +122,15 @@ $(document).ready(() => {
         $('.modal-close').click((event) => {
             hideModal();
         });
+    });
 
-        $('#cancelForm').click((event) => {
-            event.preventDefault();
+    $('#cancelForm').click((event) => {
+        event.preventDefault();
 
-            $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
-            $('.contact-us-modal__form input[type="checkbox"]').prop("checked", false);
+        $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
+        $('.contact-us-modal__form input[type="checkbox"]').prop("checked", false);
 
-            hideModal();
-        });
+        hideModal();
     });
 
     // [4] Header change
