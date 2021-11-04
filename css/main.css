@@ -15,6 +15,7 @@ File structure:
 11. Connect experts
 12. Footer
 13. Contact us modal
+14. Media
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -1137,11 +1138,30 @@ header {
   margin-top: 38px;
 }
 
+.technologies-section__content {
+  width: 1112px;
+}
+
 .technologies__table {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 64px;
+          column-gap: 64px;
+}
+
+.technologies__table::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #E6E6E6;
 }
 
 .technologies__categories {
@@ -1193,8 +1213,8 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 44px;
-  -webkit-column-gap: 32px;
-          column-gap: 32px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
 }
 
 .technologies__item {
@@ -1729,4 +1749,84 @@ footer {
 
 .contact-us-modal__form .form__buttons #sendForm:disabled {
   background: #CACEEA;
+}
+
+@media screen and (max-width: 1385px) {
+  .slick-arrow {
+    display: none !important;
+  }
+  .for-whom__carousel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .for-whom-section .slick-slider .slick-list {
+    max-width: 100%;
+  }
+  .content--slider {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .content {
+    width: 100%;
+  }
+  .scheme__item__node {
+    width: calc(((100vw - 48px) / 2) - 406px + 9px);
+  }
+  .scheme__col--right .scheme__item__node {
+    left: calc(-16px - (((100vw - 48px) / 2) - 406px + 9px));
+  }
+  .intro-section {
+    padding: 0 32px;
+  }
+  .services-section {
+    padding: 80px 24px 92px 24px;
+  }
+  .how-work-section {
+    padding: 80px 24px 100px 24px;
+  }
+  .for-whom-section {
+    padding: 80px 24px 56px 24px;
+  }
+  .resources-section {
+    padding: 42px 24px 80px 24px;
+  }
+  .industries-section {
+    padding: 80px 24px;
+  }
+  .technologies-section {
+    padding: 80px 24px;
+  }
+  .technologies__list {
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+  }
+  .technologies__categories {
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+    row-gap: 12px;
+  }
+  .technologies__category {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  footer .menu-link span::before {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .header__nav a {
+    padding: 0 10px;
+  }
+  header .header__nav .menu-link span::before {
+    width: calc(100% - 20px);
+  }
 }

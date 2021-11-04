@@ -14,6 +14,7 @@ File structure:
 11. Connect experts
 12. Footer
 13. Contact us modal
+14. Media
 
 */
 
@@ -166,7 +167,7 @@ header {
 
         svg {
             transform: translateX(4px);
-    
+
             path {
                 fill: white;
             }
@@ -198,17 +199,17 @@ header {
         border: 2px solid white;
         color: white;
 
-        svg {    
+        svg {
             path {
                 fill: white;
             }
         }
-    
+
         &:hover {
             background: white;
             color: #222A5A;
-    
-            svg {        
+
+            svg {
                 path {
                     fill: #222A5A;
                 }
@@ -977,9 +978,27 @@ header {
     }
 }
 
+.technologies-section__content {
+    width: 1112px;
+}
+
 .technologies__table {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: #E6E6E6;
+    }
 }
 
 .technologies__categories {
@@ -1015,7 +1034,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 44px;
-    column-gap: 32px;
+    column-gap: 24px;
 }
 
 .technologies__item {
@@ -1104,7 +1123,7 @@ header {
             path {
                 fill: #373F41;
             }
-        }   
+        }
     }
 }
 
@@ -1440,3 +1459,106 @@ footer {
         }
     }
 }
+
+// [14] Media
+@media screen and (max-width: 1385px) {
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .for-whom__carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .for-whom-section .slick-slider .slick-list {
+        max-width: 100%;
+    }
+
+    .content--slider {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .content {
+        width: 100%;
+    }
+
+    .scheme__item__node {
+        width: calc(((100vw - 48px) / 2) - 406px + 9px);
+    }
+
+    .scheme__col--right {
+        .scheme__item__node {
+            left: calc(-16px - (((100vw - 48px) / 2) - 406px + 9px));
+        }
+    }
+
+    .intro-section {
+        padding: 0 32px;
+    }
+
+    .services-section {
+        padding: 80px 24px 92px 24px;
+    }
+
+    .how-work-section {
+        padding: 80px 24px 100px 24px;
+    }
+
+    .for-whom-section {
+        padding: 80px 24px 56px 24px;
+    }
+
+    .resources-section {
+        padding: 42px 24px 80px 24px;
+    }
+
+    .industries-section {
+        padding: 80px 24px;
+    }
+
+    .technologies-section {
+        padding: 80px 24px;
+    }
+    
+    .technologies__list {
+        column-gap: 12px;
+    }
+
+    .technologies__categories {
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+    
+    .technologies__category {
+        flex-grow: 1;
+    }
+
+    footer {
+        .menu-link span::before {
+            width: calc(100% - 40px);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+
+        .header__nav {
+
+            a {
+                padding: 0 10px;
+            }
+
+            .menu-link {
+                span::before {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 772px) {}
