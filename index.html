@@ -26,7 +26,6 @@
             <h1 class="modal__title">want to start a project?</h1>
             <p class="modal__description">
                 Reach out to our development team for a free project call.
-                <br>
                 Let’s discuss your idea and turn it into a competitive digital product.
             </p>
             <form class="contact-us-modal__form">
@@ -56,6 +55,33 @@
         </div>
     </div>
 
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__close closeMobileMenu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0 14.1421)" fill="white" />
+                    <rect x="1.41431" width="20" height="2" rx="1" transform="rotate(45 1.41431 0)" fill="white" />
+                </svg>
+            </div>
+            <nav class="header__nav">
+                <a href="#services-section" class="menu-link"><span>Services</span></a>
+                <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
+                <a href="#industries-section" class="menu-link"><span>Industries</span></a>
+                <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <a href="" class="menu-link"><span>Insights</span></a>
+                <button class="btn--contact-us openContactModal">Contact us
+                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </nav>
+            <a class="mobile-menu__mail" href="mailto:email@softwarelux.com">email@softwarelux.com</a>
+        </div>
+    </div>
+
     <!-- Page -->
     <header class="header--top">
         <div class="content header__content">
@@ -76,6 +102,13 @@
                     </svg>
                 </button>
             </nav>
+            <div class="mobile-menu-burger openMobileMenu">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" rx="1" fill="white" />
+                    <rect y="6" width="20" height="2" rx="1" fill="white" />
+                    <rect y="12" width="20" height="2" rx="1" fill="white" />
+                </svg>
+            </div>
         </div>
     </header>
     <main>
@@ -112,6 +145,7 @@
                     </div>
                     <div class="services__list">
                         <div class="services__item">
+                            <img class="services__image--mobile" src="images/services-we-offer-image.svg" alt="">
                             <span data-id="1">Mobile app development</span>
                             <p>
                                 We will help you transform your business by providing full-cycle mobile development
@@ -119,6 +153,7 @@
                             </p>
                         </div>
                         <div class="services__item">
+                            <img class="services__image--mobile" src="images/services-web-dev.svg" alt="">
                             <span data-id="2">Web Development</span>
                             <p>
                                 We bring both our engineering skills and business touch to make even the most complex
@@ -126,6 +161,7 @@
                             </p>
                         </div>
                         <div class="services__item">
+                            <img class="services__image--mobile" src="images/Consulting.svg" alt="">
                             <span data-id="3">It Consulting</span>
                             <p>
                                 Muster our top brainpower to implement a successful digital transformation for the
@@ -133,6 +169,7 @@
                             </p>
                         </div>
                         <div class="services__item">
+                            <img class="services__image--mobile" src="images/Teamwork.svg" alt="">
                             <span data-id="4">Dedicated Team</span>
                             <p>
                                 Quicky and easily scale your engineering capacity while saving time and money with the
@@ -212,6 +249,70 @@
                             </div>
                         </div>
                     </div>
+                    <div class="scheme__col--mobile">
+                        <div href="#" class="scheme__item" data-id="1">
+                            <img src="images/icons/analysis.svg" alt="">
+                            <h3>analysis/<wbr>strategy</h3>
+                                <p>
+                                    At this step, we gather your ideas and business requirements to turn them into a
+                                    defined
+                                    and accurate concept of your software that suits your goals and preferred budget.
+                                </p>
+                                <div class="scheme__link">
+                                    <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                                </div>
+                                <div class="scheme__item__node">
+                                    <div class="scheme__item__node__rope"></div>
+                                    <div class="scheme__item__node__anchor"></div>
+                                </div>
+                        </div>
+                        <div href="#" class="scheme__item" data-id="2">
+                            <img src="images/icons/design.svg" alt="">
+                            <h3>design</h3>
+                            <p>
+                                Based on your business goals and your target users' needs we create a product
+                                prototype to give you an idea of how the application looks and works
+                            </p>
+                            <div class="scheme__link">
+                                <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                            </div>
+                            <div class="scheme__item__node">
+                                <div class="scheme__item__node__rope"></div>
+                                <div class="scheme__item__node__anchor"></div>
+                            </div>
+                        </div>
+                        <div href="#" class="scheme__item" data-id="3">
+                            <img src="images/icons/development.svg" alt="">
+                            <h3>PERFORMANCE/<wbr>DEVELOPMENT</h3>
+                                <p>
+                                    Our expertise spans all the most popular technologies ensuring you get real
+                                    professionals to build your solution at a reasonable cost.
+                                </p>
+                                <div class="scheme__link">
+                                    <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                                </div>
+                                <div class="scheme__item__node">
+                                    <div class="scheme__item__node__rope"></div>
+                                    <div class="scheme__item__node__anchor"></div>
+                                </div>
+                        </div>
+                        <div href="#" class="scheme__item" data-id="4">
+                            <img src="images/icons/support.svg" alt="">
+                            <h3>IMPROVEMENTS/<wbr>support</h3>
+                                <p>
+                                    Our team will help you to make the product available to users and resolve any issues
+                                    that may arise in real-life operations. Also, we can embody additional features in
+                                    future releases.
+                                </p>
+                                <div class="scheme__link">
+                                    <img src="images/icons/arrow-white-right-nobar.svg" alt="">
+                                </div>
+                                <div class="scheme__item__node">
+                                    <div class="scheme__item__node__rope"></div>
+                                    <div class="scheme__item__node__anchor"></div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -235,7 +336,8 @@
                                     elaborate your business requirements in order to launch the MVP.
                                 </p>
                                 <button class="for-whom__read-more openContactModal">get started
-                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
                                             fill="white" />
@@ -261,7 +363,8 @@
                                     that you won’t have to pay for the functionality you are not using.
                                 </p>
                                 <button class="for-whom__read-more openContactModal">get started
-                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
                                             fill="white" />
@@ -287,7 +390,8 @@
                                     your existing project.
                                 </p>
                                 <button class="for-whom__read-more openContactModal">get started
-                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
                                             fill="white" />

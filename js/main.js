@@ -5,6 +5,7 @@ File structure:
 2. Services change image
 3. Contact us modal
 4. Header change
+5. Mobile menu
 
 */
 
@@ -140,5 +141,34 @@ $(document).ready(() => {
         } else {
             $('header').addClass('header--top');
         }
+    });
+
+    // [5] Mobile menu
+    function showMobileMenu(option) {
+        if (option) {
+            $('.mobile-menu').addClass('menu-active');
+            setTimeout(() => {
+                $('.mobile-menu__content').addClass('menu-slide-in');
+            }, 10);
+        } else {
+            $('.mobile-menu').removeClass('menu-active');
+            $('.mobile-menu__content').removeClass('menu-slide-in');
+        }
+    }
+
+    $('.openMobileMenu').click(() => {
+        showMobileMenu(true);
+    });
+
+    $('.mobile-menu').click(() => {
+        showMobileMenu(false);
+    });
+
+    $('.mobile-menu__content').click((event) => {
+        event.stopPropagation();
+    });
+
+    $('.mobile-menu .menu-link, .mobile-menu .openContactModal, .mobile-menu__mail, .closeMobileMenu').click(() => {
+        showMobileMenu(false);
     });
 });
