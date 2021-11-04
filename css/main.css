@@ -2256,16 +2256,18 @@ footer {
     display: none;
   }
   .technologies__categories {
-    display: block;
-    -webkit-column-count: 3;
-            column-count: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-column-gap: 8px;
             column-gap: 8px;
     margin-bottom: 24px;
+    row-gap: 8px;
   }
   .technologies__category {
-    -webkit-column-break-inside: avoid;
-            break-inside: avoid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2278,10 +2280,9 @@ footer {
     text-align: center;
     padding: 8px;
     font-size: 12px;
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-    margin-bottom: 4px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .technologies__list {
     -webkit-column-gap: 12px;

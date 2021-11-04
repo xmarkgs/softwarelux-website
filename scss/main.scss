@@ -2032,22 +2032,21 @@ footer {
     }
 
     .technologies__categories {
-        display: block;
-        column-count: 3;
+        display: flex;
+        justify-content: center;
         column-gap: 8px;
         margin-bottom: 24px;
+        row-gap: 8px;
     }
 
     .technologies__category {
-        break-inside: avoid;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 8px;
         font-size: 12px;
-        flex-grow: 0;
-        margin-bottom: 4px;
+        flex-grow: 1;
     }
 
     .technologies__list {
