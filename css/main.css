@@ -279,10 +279,54 @@ header .mobile-menu-burger svg rect {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 12px;
-  background: url("../images/backgrounds/intro-bg.jpg");
   background-size: cover;
   min-height: 500px;
   height: 100vh;
+}
+
+.intro-section video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30vw -5vw;
+     object-position: 30vw -5vw;
+  -webkit-filter: hue-rotate(220deg);
+          filter: hue-rotate(220deg);
+  background: black;
+}
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+@media screen and (max-width: 1185px) {
+  .intro-section video {
+    -o-object-position: 20vw -5vw;
+       object-position: 20vw -5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro-section video {
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 
 .scroll-down {
@@ -970,9 +1014,7 @@ header .mobile-menu-burger svg rect {
 
 .resources__list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1035,6 +1077,74 @@ header .mobile-menu-burger svg rect {
   height: 0;
   border-top: 2px dashed #CDCDCD;
   margin-right: 8px;
+}
+
+.benefits-list {
+  max-width: 800px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.benefits-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 48px 24px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #373F41;
+  border: 2px solid #e6e5fc;
+  background: #EDECFF;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.benefits-list__item:hover {
+  border-color: #9E99E3;
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .benefits-list__item {
+    padding: 18px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .benefits-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .benefits-list__item {
+    padding: 8px;
+    border-radius: 0;
+    padding: 8px;
+  }
+  .benefits-list__item:nth-child(odd) {
+    border: 2px solid #EDECFF;
+    background: #F5F7FD;
+  }
+  .benefits-list__item:nth-child(even) {
+    border: 2px solid #e6e5fc;
+    background: #EDECFF;
+  }
 }
 
 .industries-section {
