@@ -262,8 +262,8 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 30vw -5vw;
-        filter: hue-rotate(220deg);
+        // object-position: 30vw -5vw;
+        // filter: hue-rotate(220deg);
         background: black;
     }
 
@@ -277,27 +277,27 @@ header {
         z-index: -1;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.55);
+        background: #403e5fc5;
         // backdrop-filter: blur(10px);
     }
 }
 
-@media screen and (max-width: 1185px) {
-    .intro-section {
-        video {
-            object-position: 20vw -5vw;
-        }
-    }
+// @media screen and (max-width: 1185px) {
+//     .intro-section {
+//         video {
+//             object-position: 20vw -5vw;
+//         }
+//     }
     
-}
+// }
 
-@media screen and (max-width: 767px) {
-    .intro-section {
-        video {
-            object-position: center;
-        }
-    }
-}
+// @media screen and (max-width: 767px) {
+//     .intro-section {
+//         video {
+//             object-position: center;
+//         }
+//     }
+// }
 
 .scroll-down {
     position: absolute;

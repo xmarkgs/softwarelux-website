@@ -295,10 +295,6 @@ header .mobile-menu-burger svg rect {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 30vw -5vw;
-     object-position: 30vw -5vw;
-  -webkit-filter: hue-rotate(220deg);
-          filter: hue-rotate(220deg);
   background: black;
 }
 
@@ -312,21 +308,7 @@ header .mobile-menu-burger svg rect {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-@media screen and (max-width: 1185px) {
-  .intro-section video {
-    -o-object-position: 20vw -5vw;
-       object-position: 20vw -5vw;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .intro-section video {
-    -o-object-position: center;
-       object-position: center;
-  }
+  background: #403e5fc5;
 }
 
 .scroll-down {
