@@ -310,7 +310,7 @@ header .mobile-menu-burger svg rect {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: #403e5fc5;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .scroll-down {
