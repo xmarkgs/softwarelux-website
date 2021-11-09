@@ -295,6 +295,8 @@ header .mobile-menu-burger svg rect {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: hue-rotate(220deg);
+          filter: hue-rotate(220deg);
   background: black;
 }
 
@@ -308,7 +310,7 @@ header .mobile-menu-burger svg rect {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: #403e5fc5;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .scroll-down {
@@ -1062,7 +1064,6 @@ header .mobile-menu-burger svg rect {
 }
 
 .benefits-list {
-  max-width: 800px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -1084,16 +1085,11 @@ header .mobile-menu-burger svg rect {
   font-weight: bold;
   font-size: 20px;
   color: #373F41;
-  border: 2px solid #e6e5fc;
-  background: #EDECFF;
+  border: 2px solid rgba(158, 153, 227, 0.15);
   text-align: center;
-  border-radius: 4px;
+  border-radius: 12px;
   -webkit-transition: .1s;
   transition: .1s;
-}
-
-.benefits-list__item:hover {
-  border-color: #9E99E3;
 }
 
 @media screen and (max-width: 767px) {
