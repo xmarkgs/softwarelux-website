@@ -801,13 +801,25 @@ header .mobile-menu-burger svg rect {
 }
 
 .for-whom-section .slick-slider .slick-dots li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 56px;
+  height: 32px;
   cursor: pointer;
 }
 
 .for-whom-section .slick-slider .slick-dots .slick-active button {
-  outline: 8px solid white;
+  width: 32px;
+  height: 32px;
+  border: 8px solid white;
   background: transparent;
-  border: 0;
 }
 
 .for-whom-section .slick-slider .slick-dots button {
@@ -825,8 +837,9 @@ header .mobile-menu-burger svg rect {
 }
 
 .for-whom-section .slick-slider .slick-dots li:hover button {
-  outline: 8px solid white;
-  border: 0;
+  width: 32px;
+  height: 32px;
+  border: 8px solid white;
   background: transparent;
 }
 
