@@ -650,7 +650,8 @@ header .mobile-menu-burger svg rect {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 36px 44px 36px;
-  outline: 2px solid rgba(158, 153, 227, 0.15);
+  -webkit-box-shadow: 0 0 0 2px rgba(158, 153, 227, 0.15);
+          box-shadow: 0 0 0 2px rgba(158, 153, 227, 0.15);
   border-radius: 12px;
   -webkit-transition: .05s;
   transition: .05s;
@@ -662,7 +663,8 @@ header .mobile-menu-burger svg rect {
 }
 
 .scheme__item:hover {
-  outline: 4px solid #9E99E3;
+  -webkit-box-shadow: 0 0 0 4px #9E99E3;
+          box-shadow: 0 0 0 4px #9E99E3;
 }
 
 .scheme__item:hover::before {
@@ -1154,7 +1156,8 @@ header .mobile-menu-burger svg rect {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  outline: 2px solid rgba(123, 97, 255, 0.15);
+  -webkit-box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.15);
+          box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.15);
   background: white;
   border-radius: 12px;
   -webkit-transition: .05s;
@@ -1163,7 +1166,8 @@ header .mobile-menu-burger svg rect {
 }
 
 .industries__item:hover {
-  outline: 4px solid #9E99E3;
+  -webkit-box-shadow: 0 0 0 4px #9E99E3;
+          box-shadow: 0 0 0 4px #9E99E3;
 }
 
 .industries__item:nth-child(1) .industry__preview {
@@ -1661,7 +1665,8 @@ footer {
   border-radius: 4px;
   color: #373F41;
   border: 0;
-  outline: 1px solid #DADADA;
+  -webkit-box-shadow: 0 0 0 1px #DADADA;
+          box-shadow: 0 0 0 1px #DADADA;
   -webkit-transition: .05s;
   transition: .05s;
 }
@@ -1689,7 +1694,9 @@ footer {
 .contact-us-modal__form label input[type="text"]:focus,
 .contact-us-modal__form label input[type="email"]:focus {
   border: 0;
-  outline: 2px solid #9E99E3;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px #9E99E3;
+          box-shadow: 0 0 0 2px #9E99E3;
 }
 
 .contact-us-modal__form label textarea {
@@ -1702,7 +1709,8 @@ footer {
   border-radius: 4px;
   color: #373F41;
   border: 0;
-  outline: 1px solid #DADADA;
+  -webkit-box-shadow: 0 0 0 1px #DADADA;
+          box-shadow: 0 0 0 1px #DADADA;
   -webkit-transition: .05s;
   transition: .05s;
   resize: vertical;
@@ -1726,7 +1734,9 @@ footer {
 
 .contact-us-modal__form label textarea:focus {
   border: 0;
-  outline: 2px solid #9E99E3;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px #9E99E3;
+          box-shadow: 0 0 0 2px #9E99E3;
 }
 
 .contact-us-modal__form .checkbox-label {
