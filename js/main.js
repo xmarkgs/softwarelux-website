@@ -6,6 +6,7 @@ File structure:
 3. Contact us modal
 4. Header change
 5. Mobile menu
+6. Scheme item node responsive
 
 */
 
@@ -147,10 +148,14 @@ $(document).ready(() => {
     function showMobileMenu(option) {
         if (option) {
             $('.mobile-menu').addClass('menu-active');
+            $('body').addClass('no-scroll');
+            changeScrollPadding(true);
             setTimeout(() => {
                 $('.mobile-menu__content').addClass('menu-slide-in');
             }, 10);
         } else {
+            $('body').removeClass('no-scroll');
+            changeScrollPadding(false);
             $('.mobile-menu').removeClass('menu-active');
             $('.mobile-menu__content').removeClass('menu-slide-in');
         }
@@ -170,5 +175,20 @@ $(document).ready(() => {
 
     $('.mobile-menu .menu-link, .mobile-menu .openContactModal, .mobile-menu__mail, .closeMobileMenu').click(() => {
         showMobileMenu(false);
+    });
+
+    // [6] Scheme item node responsive
+    function howWeWorkInit() {
+        if (window.innerWidth <= 1150) {
+            $('.scheme__item__node').css('width', `calc(((${window.innerWidth - getScrollbarWidth()}px - 48px) / 2) - 406px + 9px)`);
+            $('.scheme__col--right .scheme__item__node').css('left', `${-16 - (((window.innerWidth - getScrollbarWidth() - 48) / 2) - 406 + 9)}px`);
+        } else {
+            $('.scheme__item__node').removeAttr('style');
+        }
+    }
+    howWeWorkInit();
+
+    $(window).resize(() => {
+        howWeWorkInit();
     });
 });

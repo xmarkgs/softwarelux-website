@@ -202,7 +202,7 @@ header {
     }
 
     .website-logo {
-        filter: #{"invert()"};
+        filter: #{"saturate(0) brightness(0) invert()"};
     }
 
     .menu-link {
@@ -376,7 +376,7 @@ header {
 // [5] Service we offer section
 .services-section {
     padding: 80px 12px 92px 12px;
-    background: #F5F7FD;
+    background: linear-gradient(360deg, rgba(158, 153, 227, 0.25) 24.49%, rgba(0, 0, 0, 0) 90%), #000000;
 }
 
 .services-section__content {
@@ -385,6 +385,10 @@ header {
 
     .services-section__table {
         margin-top: 72px;
+    }
+
+    .section__title {
+        color: white;
     }
 }
 
@@ -449,7 +453,7 @@ header {
         font-size: 32px;
         line-height: 100%;
         font-weight: bold;
-        color: #373F41;
+        color: white;
         cursor: default;
         transition: .05s;
 
@@ -461,6 +465,7 @@ header {
             width: 50px;
             height: 50px;
             background: url('../images/icons/arrow-small-right.svg');
+            filter: brightness(0) #{"invert()"};
             background-repeat: no-repeat;
             background-position: center;
             transition: .1s;
@@ -468,7 +473,6 @@ header {
         }
 
         &:hover {
-            color: #9E99E3;
 
             &::before {
                 right: 100%;
@@ -481,7 +485,7 @@ header {
         margin-top: 16px;
         font-size: 16px;
         font-weight: 300;
-        color: #373F41;
+        color: white;
     }
 }
 
@@ -662,7 +666,7 @@ header {
 // [7] For whom section
 .for-whom-section {
     padding: 80px 12px 56px 12px;
-    background: #F5F7FD;
+    background: linear-gradient(148.53deg, rgba(158, 153, 227, 0.25) 32.15%, rgba(255, 255, 255, 0) 71.27%), #000000;
 
     .slick-slider {
         display: flex;
@@ -687,8 +691,8 @@ header {
             width: 72px;
             height: 72px;
             border-radius: 100%;
-            background: white;
-            border: 2px solid #9E99E3;
+            background: transparent;
+            border: 2px solid #FFFFFF;
             display: grid;
             place-items: center;
             cursor: pointer;
@@ -696,14 +700,14 @@ header {
             align-self: center;
 
             svg path {
-                fill: #9E99E3;
+                fill: white;
             }
 
             &:hover {
-                background: #9E99E3;
+                background: white;
 
                 svg path {
-                    fill: white;
+                    fill: #373F41;
                 }
             }
         }
@@ -721,8 +725,9 @@ header {
 
             .slick-active {
                 button {
-                    outline: 8px solid #EDECFF;
-                    background: #9E99E3;
+                    outline: 8px solid white;
+                    background: transparent;
+                    border: 0;
                 }
             }
 
@@ -733,16 +738,22 @@ header {
                 color: transparent;
                 font-size: 0;
                 transition: .05s;
-                border: 4px solid #9E99E3;
+                background: transparent;
+                border: 4px solid white;
                 margin: 0 12px;
                 cursor: pointer;
             }
 
             li:hover button {
-                outline: 8px solid #EDECFF;
-                background: #9E99E3;
+                outline: 8px solid white;
+                border: 0;
+                background: transparent;
             }
         }
+    }
+
+    .section__title {
+        color: white;
     }
 }
 
@@ -756,6 +767,7 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 4px;
 }
 
 .for-whom__image {
@@ -772,10 +784,9 @@ header {
     align-items: center;
 
     h4 {
-        // margin-left: 8px;
         font-size: 32px;
         line-height: 156%;
-        color: #373F41;
+        color: white;
     }
 }
 
@@ -789,13 +800,14 @@ header {
         font-size: 32px;
         line-height: 100%;
         font-weight: normal;
-        color: #373F41;
+        color: white;
     }
 
     p {
         font-size: 20px;
         font-weight: 300;
         margin-top: 24px;
+        color: white;
     }
 }
 
@@ -841,12 +853,17 @@ header {
 // [8] Resources section
 .resources-section {
     padding: 42px 12px 80px 12px;
+    background: linear-gradient(360deg, rgba(158, 153, 227, 0.25) 27.29%, rgba(0, 0, 0, 0) 100%), #000000;
 }
 
 .resources-section__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .section__title {
+        color: white;
+    }
 }
 
 .resources__description {
@@ -856,27 +873,27 @@ header {
     margin: 56px 0;
     font-weight: 300;
     font-size: 20px;
-    color: #373F41;
+    color: white;
 
-    &::before {
-        content: '“';
-        position: absolute;
-        top: -40px;
-        left: -40px;
-        font-size: 132px;
-        font-weight: bold;
-        color: #F0F0FB;
-    }
+    // &::before {
+    //     content: '“';
+    //     position: absolute;
+    //     top: -40px;
+    //     left: -40px;
+    //     font-size: 132px;
+    //     font-weight: bold;
+    //     color: #F0F0FB;
+    // }
 
-    &::after {
-        content: '“';
-        position: absolute;
-        top: -40px;
-        right: -40px;
-        font-size: 132px;
-        font-weight: bold;
-        color: #F0F0FB;
-    }
+    // &::after {
+    //     content: '“';
+    //     position: absolute;
+    //     top: -40px;
+    //     right: -40px;
+    //     font-size: 132px;
+    //     font-weight: bold;
+    //     color: #F0F0FB;
+    // }
 }
 
 .resources__list {
@@ -939,6 +956,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
+    max-width: 938px;
 }
 
 .benefits-list__item {
@@ -948,8 +966,8 @@ header {
     padding: 48px 24px;
     font-weight: bold;
     font-size: 20px;
-    color: #373F41;
-    border: 2px solid rgba(158, 153, 227, 0.15);
+    color: white;
+    border: 2px solid white;
     text-align: center;
     border-radius: 12px;
     transition: .1s;
@@ -994,7 +1012,6 @@ header {
 // [9] Industries section
 .industries-section {
     padding: 80px 12px;
-    background: #F5F7FD;
 
     .industries__table {
         margin-top: 56px;
@@ -1207,8 +1224,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 80px 12px;
-    background: url("../images/backgrounds/contact.jpg");
-    background-size: cover;
+    background: linear-gradient(166.34deg, rgba(158, 153, 227, 0.25) 32.86%, rgba(0, 0, 0, 0) 113.19%), #000000;
 
     h1 {
         margin-bottom: 56px;
@@ -1304,10 +1320,6 @@ footer {
                 margin: 0;
             }
         }
-    }
-
-    .website-logo {
-        max-width: 120px;
     }
 }
 
@@ -1736,7 +1748,6 @@ footer {
         }
 
         span:hover {
-            color: #373F41;
 
             &::before {
                 display: none;
@@ -2234,6 +2245,7 @@ footer {
 .mobile-menu__content {
     width: 75%;
     height: 100%;
+    overflow-y: auto;
     background: white;
     padding: 72px 72px 72px 12px;
     display: flex;
