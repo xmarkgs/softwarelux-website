@@ -993,19 +993,9 @@ header {
 
     .benefits-list__item {
         padding: 8px;
-        border-radius: 0;
-
-        padding: 8px;
-
-        &:nth-child(odd) {
-            border: 2px solid #EDECFF;
-            background: #F5F7FD;
-        }
-
-        &:nth-child(even) {
-            border: 2px solid #e6e5fc;
-            background: #EDECFF;
-        }
+        border-radius: 4px;
+        border: 2px solid white;
+        padding: 8px;  
     }
 }
 

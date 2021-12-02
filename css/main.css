@@ -1110,16 +1110,9 @@ header .mobile-menu-burger svg rect {
   }
   .benefits-list__item {
     padding: 8px;
-    border-radius: 0;
+    border-radius: 4px;
+    border: 2px solid white;
     padding: 8px;
-  }
-  .benefits-list__item:nth-child(odd) {
-    border: 2px solid #EDECFF;
-    background: #F5F7FD;
-  }
-  .benefits-list__item:nth-child(even) {
-    border: 2px solid #e6e5fc;
-    background: #EDECFF;
   }
 }
 
