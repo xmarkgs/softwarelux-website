@@ -7,6 +7,7 @@ File structure:
 4. Header change
 5. Mobile menu
 6. Scheme item node responsive
+7. On-scroll animations
 
 */
 
@@ -190,5 +191,21 @@ $(document).ready(() => {
 
     $(window).resize(() => {
         howWeWorkInit();
+    });
+
+    // [7] On-scroll animations
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            $('.animateOnScroll').each(function () {
+                let elementTop = $(this).position().top;
+                let windowBottom = $(window).scrollTop() + $(window).height();
+
+                // If the element's top edge is in the field of view, animate it
+                if (windowBottom > elementTop) {
+                    $(this).addClass($(this).attr('data-animation'));
+                    $(this).addClass('animated');
+                }
+            });
+        });
     });
 });

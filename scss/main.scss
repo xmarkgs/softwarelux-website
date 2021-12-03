@@ -62,6 +62,15 @@ main {
     flex: 1 0;
 }
 
+.animateOnScroll {
+    animation-duration: 0.7s;
+    visibility: hidden;
+
+    &.animated {
+        visibility: visible;
+    }
+}
+
 .content {
     width: 1088px;
     margin: 0 auto;

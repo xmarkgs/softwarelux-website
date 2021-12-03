@@ -70,6 +70,16 @@ main {
           flex: 1 0;
 }
 
+.animateOnScroll {
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  visibility: hidden;
+}
+
+.animateOnScroll.animated {
+  visibility: visible;
+}
+
 .content {
   width: 1088px;
   margin: 0 auto;
