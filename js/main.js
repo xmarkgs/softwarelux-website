@@ -194,18 +194,21 @@ $(document).ready(() => {
     });
 
     // [7] On-scroll animations
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            $('.animateOnScroll').each(function () {
-                let elementTop = $(this).position().top;
-                let windowBottom = $(window).scrollTop() + $(window).height();
+    function doScrollAnimations () {
+        $('.animateOnScroll').each(function () {
+            let elementTop = $(this).offset().top;
+            let windowBottom = $(window).scrollTop() + $(window).height();
 
-                // If the element's top edge is in the field of view, animate it
-                if (windowBottom > elementTop) {
-                    $(this).addClass($(this).attr('data-animation'));
-                    $(this).addClass('animated');
-                }
-            });
+            // If the element's top edge is in the field of view, animate it
+            if (windowBottom > elementTop+$(this).height()*0.1) {
+                $(this).addClass($(this).attr('data-animation'));
+                $(this).addClass('animated');
+            }
         });
+    }
+    doScrollAnimations();
+
+    $(window).scroll(function () {
+        doScrollAnimations();
     });
 });

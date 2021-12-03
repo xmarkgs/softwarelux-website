@@ -71,8 +71,8 @@ main {
 }
 
 .animateOnScroll {
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   visibility: hidden;
 }
 
