@@ -1607,9 +1607,11 @@ footer {
             text-transform: uppercase;
             transition: .05s;
             border: 0;
+            background: #222A5A;
+            cursor: pointer;
 
-            &:disabled {
-                background: #CACEEA;
+            &:hover {
+                background: #9E99E3;
             }
         }
     }

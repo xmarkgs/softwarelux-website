@@ -1879,10 +1879,12 @@ footer {
   -webkit-transition: .05s;
   transition: .05s;
   border: 0;
+  background: #222A5A;
+  cursor: pointer;
 }
 
-.contact-us-modal__form .form__buttons #sendForm:disabled {
-  background: #CACEEA;
+.contact-us-modal__form .form__buttons #sendForm:hover {
+  background: #9E99E3;
 }
 
 @media screen and (max-width: 1385px) {

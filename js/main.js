@@ -8,6 +8,7 @@ File structure:
 5. Mobile menu
 6. Scheme item node responsive
 7. On-scroll animations
+8. Form preventDefault
 
 */
 
@@ -211,4 +212,9 @@ $(document).ready(() => {
     $(window).scroll(function () {
         doScrollAnimations();
     });
+
+    // [8] Form preventDefault
+    $('.contact-us-modal__form').ajaxForm({url: 'mailer.php', type: 'post', success: () => {
+        window.location.replace('/form-sent.html');
+    }});
 });
