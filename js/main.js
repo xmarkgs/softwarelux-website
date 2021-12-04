@@ -97,6 +97,7 @@ $(document).ready(() => {
         $('.contact-us-modal--result').addClass('display--none');
         $('.contact-us-modal--progress').addClass('display--none');
         $('.contact-us-modal--initial').removeClass('display--none');
+        $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
     }
 
     function changeScrollPadding(option) {
@@ -134,10 +135,6 @@ $(document).ready(() => {
 
     $('#cancelForm').click((event) => {
         event.preventDefault();
-
-        $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
-        $('.contact-us-modal__form input[type="checkbox"]').prop("checked", false);
-
         hideModal();
     });
 
@@ -222,7 +219,7 @@ $(document).ready(() => {
         url: 'mailer.php', 
         type: 'post',
         beforeSerialize: () => {
-            $('.contact-us-modal--initial').add('display--none');
+            $('.contact-us-modal--initial').addClass('display--none');
             $('.contact-us-modal--progress').removeClass('display--none');
         },
         success: () => {
