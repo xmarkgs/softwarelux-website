@@ -1622,6 +1622,15 @@ footer {
   text-align: center;
 }
 
+.contact-us-modal--error {
+  padding: 72px 0;
+  text-align: center;
+}
+
+.contact-us-modal--error a {
+  color: #222A5A;
+}
+
 .modal-close {
   position: absolute;
   top: 24px;
