@@ -80,6 +80,10 @@ main {
   visibility: visible;
 }
 
+.display--none {
+  display: none;
+}
+
 .content {
   width: 1088px;
   margin: 0 auto;
@@ -1607,6 +1611,15 @@ footer {
   border-radius: 12px;
   -webkit-box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.29);
           box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.29);
+}
+
+.contact-us-modal--progress {
+  padding: 72px 64px;
+}
+
+.contact-us-modal--result {
+  padding: 72px 0;
+  text-align: center;
 }
 
 .modal-close {

@@ -49,35 +49,44 @@
                         fill="#151F2B" />
                 </svg>
             </div>
-            <h1 class="modal__title">want to start a project?</h1>
-            <p class="modal__description">
-                Reach out to our development team for a free project call.
-                Let’s discuss your idea and turn it into a competitive digital&nbsp;product.
-            </p>
-            <form class="contact-us-modal__form" method="post">
-                <label>
-                    <span>Name<em>*</em></span>
-                    <input required type="text" placeholder="Type here" name="name">
-                </label>
-                <label>
-                    <span>Email<em>*</em></span>
-                    <input required type="email" placeholder="Type here" name="email">
-                </label>
-                <label>
-                    <span>How can we help you<em>*</em></span>
-                    <textarea required name="message" placeholder="Type here"></textarea>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="privacy" checked required>
-                    <span class="checkmark"></span>
-                    <p>I agree to Privacy Policy</p>
-                </label>
-                <p>We`ll get back to you within 24 business hours.</p>
-                <div class="form__buttons">
-                    <button id="cancelForm">cancel</button>
-                    <button type="submit" id="sendForm">get in touch</button>
-                </div>
-            </form>
+            <div class="contact-us-modal--initial">
+                <h1 class="modal__title">want to start a project?</h1>
+                <p class="modal__description">
+                    Reach out to our development team for a free project call.
+                    Let’s discuss your idea and turn it into a competitive digital&nbsp;product.
+                </p>
+                <form class="contact-us-modal__form" method="post">
+                    <label>
+                        <span>Name<em>*</em></span>
+                        <input required type="text" placeholder="Type here" name="name">
+                    </label>
+                    <label>
+                        <span>Email<em>*</em></span>
+                        <input required type="email" placeholder="Type here" name="email">
+                    </label>
+                    <label>
+                        <span>How can we help you<em>*</em></span>
+                        <textarea required name="message" placeholder="Type here"></textarea>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="privacy" checked required>
+                        <span class="checkmark"></span>
+                        <p>I agree to Privacy Policy</p>
+                    </label>
+                    <p>We`ll get back to you within 24 business hours.</p>
+                    <div class="form__buttons">
+                        <button id="cancelForm">cancel</button>
+                        <button type="submit" id="sendForm">get in touch</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-us-modal--progress">
+                <img src="videos/circles-loader.gif" alt="">
+            </div>
+            <div class="contact-us-modal--result">
+                <h3>Thanks for your message!</h3>
+                <p>We'll reach out to you as soon as possible.</p>
+            </div>
         </div>
     </div>
 
@@ -753,7 +762,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- AJAX form -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

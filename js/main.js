@@ -93,6 +93,10 @@ $(document).ready(() => {
         $('body').removeClass('no-scroll');
         $('.contact-us-modal').removeClass('active');
         $('.contact-us-modal').removeClass('changeModalOpacity');
+        $('.contact-us-modal--progress').addClass('display--none');
+        $('.contact-us-modal--result').addClass('display--none');
+        $('.contact-us-modal--progress').addClass('display--none');
+        $('.contact-us-modal--initial').removeClass('display--none');
     }
 
     function changeScrollPadding(option) {
@@ -214,7 +218,16 @@ $(document).ready(() => {
     });
 
     // [8] Form preventDefault
-    $('.contact-us-modal__form').ajaxForm({url: 'mailer.php', type: 'post', success: () => {
-        window.location.replace('/form-sent.html');
-    }});
+    $('.contact-us-modal__form').ajaxForm({
+        url: 'mailer.php', 
+        type: 'post',
+        beforeSerialize: () => {
+            $('.contact-us-modal--initial').add('display--none');
+            $('.contact-us-modal--progress').removeClass('display--none');
+        },
+        success: () => {
+            $('.contact-us-modal--progress').addClass('display--none');
+            $('.contact-us-modal--result').removeClass('display--none');
+        }
+    });
 });
