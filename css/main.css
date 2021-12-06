@@ -1890,7 +1890,7 @@ footer {
   color: white;
 }
 
-.contact-us-modal__form .form__buttons #sendForm {
+.contact-us-modal__form .form__buttons #sendContUsForm {
   border-radius: 8px;
   padding: 16px 24px;
   font-size: 16px;
@@ -1905,8 +1905,13 @@ footer {
   cursor: pointer;
 }
 
-.contact-us-modal__form .form__buttons #sendForm:hover {
+.contact-us-modal__form .form__buttons #sendContUsForm:not(:disabled):hover {
   background: #9E99E3;
+}
+
+.contact-us-modal__form .form__buttons #sendContUsForm:disabled {
+  cursor: not-allowed;
+  background: #373F41;
 }
 
 @media screen and (max-width: 1385px) {

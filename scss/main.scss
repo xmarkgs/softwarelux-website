@@ -1619,7 +1619,7 @@ footer {
             }
         }
 
-        #sendForm {
+        #sendContUsForm {
             border-radius: 8px;
             padding: 16px 24px;
             font-size: 16px;
@@ -1632,8 +1632,13 @@ footer {
             background: #222A5A;
             cursor: pointer;
 
-            &:hover {
+            &:not(:disabled):hover {
                 background: #9E99E3;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+                background: #373F41;
             }
         }
     }

@@ -8,7 +8,8 @@ File structure:
 5. Mobile menu
 6. Scheme item node responsive
 7. On-scroll animations
-8. Form preventDefault
+8. Form submission
+9. Form submit-btn reactiveness
 
 */
 
@@ -98,6 +99,7 @@ $(document).ready(() => {
         $('.contact-us-modal--error').addClass('display--none');
         $('.contact-us-modal--initial').removeClass('display--none');
         $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
+        $('.contact-us-modal__form #sendContUsForm').attr('disabled', true);
     }
 
     function changeScrollPadding(option) {
@@ -196,13 +198,13 @@ $(document).ready(() => {
     });
 
     // [7] On-scroll animations
-    function doScrollAnimations () {
+    function doScrollAnimations() {
         $('.animateOnScroll').each(function () {
             let elementTop = $(this).offset().top;
             let windowBottom = $(window).scrollTop() + $(window).height();
 
             // If the element's top edge is in the field of view, animate it
-            if (windowBottom > elementTop+$(this).height()*0.1) {
+            if (windowBottom > elementTop + $(this).height() * 0.1) {
                 $(this).addClass($(this).attr('data-animation'));
                 $(this).addClass('animated');
             }
@@ -214,9 +216,9 @@ $(document).ready(() => {
         doScrollAnimations();
     });
 
-    // [8] Form preventDefault
+    // [8] Form submission
     $('.contact-us-modal__form').ajaxForm({
-        url: 'mailer.php', 
+        url: 'mailer.php',
         type: 'post',
         beforeSerialize: () => {
             $('.contact-us-modal--initial').addClass('display--none');
@@ -232,6 +234,21 @@ $(document).ready(() => {
         error: () => {
             $('.contact-us-modal--progress').addClass('display--none');
             $('.contact-us-modal--error').removeClass('display--none');
+        }
+    });
+
+    // [9] Form submit-btn reactiveness
+    $('.contact-us-modal__form input, .contact-us-modal__form textarea').change(() => {
+        let elements = document.querySelectorAll('.contact-us-modal__form input, .contact-us-modal__form textarea');
+        let valid = true;
+        for (let element of elements) {
+            element.checkValidity() ? null : valid = false;
+        }
+        console.log(valid);
+        if (valid) {
+            $('.contact-us-modal__form #sendContUsForm').removeAttr('disabled');
+        } else {
+            $('.contact-us-modal__form #sendContUsForm').attr('disabled', true);
         }
     });
 });
