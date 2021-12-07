@@ -238,7 +238,7 @@ $(document).ready(() => {
     });
 
     // [9] Form submit-btn reactiveness
-    $('.contact-us-modal__form input, .contact-us-modal__form textarea').change(() => {
+    $('.contact-us-modal__form input, .contact-us-modal__form textarea').on('input', () => {
         let elements = document.querySelectorAll('.contact-us-modal__form input, .contact-us-modal__form textarea');
         let valid = true;
         for (let element of elements) {
