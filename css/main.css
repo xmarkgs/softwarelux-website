@@ -531,7 +531,7 @@ header .mobile-menu-burger svg rect {
   opacity: 0;
 }
 
-.services__item span:hover::before {
+.services__item span:hover::before, .services__item span.serviceImgChanged::before {
   right: 100%;
   opacity: 1;
 }

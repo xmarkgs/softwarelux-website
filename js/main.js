@@ -52,6 +52,10 @@ $(document).ready(() => {
                     changeTo = +currentImage + 1;
                 }
 
+                $(`.services__item span[data-id="${changeTo}"]`).addClass('serviceImgChanged');
+                setTimeout(() => {
+                    $(`.services__item span[data-id="${changeTo}"]`).removeClass('serviceImgChanged');
+                }, 1000);
                 $(`.services__image[data-id="${changeTo}"]`).addClass('active-service');
                 currentImage = changeTo;
             }
@@ -60,6 +64,7 @@ $(document).ready(() => {
     changeImages();
 
     $('.services__item span').hover((event) => {
+        $(`.services__item span`).removeClass('serviceImgChanged');
         let services = document.querySelectorAll('.services__image');
         let showService = event.target.dataset.id;
         currentImage = showService;

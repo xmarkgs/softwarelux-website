@@ -485,7 +485,7 @@ header {
             opacity: 0;
         }
 
-        &:hover {
+        &:hover, &.serviceImgChanged {
 
             &::before {
                 right: 100%;
