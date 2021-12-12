@@ -501,12 +501,6 @@ header .mobile-menu-burger svg rect {
   margin-top: 37px;
 }
 
-.services__item.serviceImgChanged {
-  -webkit-box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
-          box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
-  background: rgba(237, 236, 255, 0.14);
-}
-
 .services__item span {
   position: relative;
   font-family: "Galano Grotesque";
@@ -515,6 +509,7 @@ header .mobile-menu-burger svg rect {
   line-height: 100%;
   font-weight: bold;
   color: white;
+  cursor: default;
   -webkit-transition: .05s;
   transition: .05s;
 }
@@ -534,6 +529,11 @@ header .mobile-menu-burger svg rect {
   -webkit-transition: .1s;
   transition: .1s;
   opacity: 0;
+}
+
+.services__item span:hover::before, .services__item span.serviceImgChanged::before {
+  right: 100%;
+  opacity: 1;
 }
 
 .services__item p {
