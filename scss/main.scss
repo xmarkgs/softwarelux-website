@@ -459,6 +459,16 @@ header {
         margin-top: 37px;
     }
 
+    &:hover {
+        box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
+        background: rgba(237, 236, 255, 0.14);
+    }
+
+    &.serviceImgChanged {
+        box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
+        background: rgba(237, 236, 255, 0.14);
+    }
+
     span {
         position: relative;
         font-family: "Galano Grotesque";
@@ -485,13 +495,13 @@ header {
             opacity: 0;
         }
 
-        &:hover, &.serviceImgChanged {
+        // &:hover, &.serviceImgChanged {
 
-            &::before {
-                right: 100%;
-                opacity: 1;
-            }
-        }
+        //     &::before {
+        //         right: 100%;
+        //         opacity: 1;
+        //     }
+        // }
     }
 
     p {

@@ -52,10 +52,12 @@ $(document).ready(() => {
                     changeTo = +currentImage + 1;
                 }
 
-                $(`.services__item span[data-id="${changeTo}"]`).addClass('serviceImgChanged');
-                setTimeout(() => {
-                    $(`.services__item span[data-id="${changeTo}"]`).removeClass('serviceImgChanged');
-                }, 1000);
+                // $(`.services__item span[data-id="${changeTo}"]`).addClass('serviceImgChanged');
+                // setTimeout(() => {
+                //     $(`.services__item span[data-id="${changeTo}"]`).removeClass('serviceImgChanged');
+                // }, 1000);
+                $('.services__item').removeClass('serviceImgChanged');
+                $(`.services__item[data-id="${changeTo}"]`).addClass('serviceImgChanged');
                 $(`.services__image[data-id="${changeTo}"]`).addClass('active-service');
                 currentImage = changeTo;
             }
@@ -63,10 +65,10 @@ $(document).ready(() => {
     }
     changeImages();
 
-    $('.services__item span').mouseover((event) => {
-        $(`.services__item span`).removeClass('serviceImgChanged');
+    $('.services__item').mouseover((event) => {
+        $(`.services__item`).removeClass('serviceImgChanged');
         let services = document.querySelectorAll('.services__image');
-        let showService = event.target.dataset.id;
+        let showService = event.currentTarget.dataset.id;
         currentImage = showService;
 
         for (let image of services) {
