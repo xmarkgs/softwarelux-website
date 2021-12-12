@@ -459,10 +459,10 @@ header {
         margin-top: 37px;
     }
 
-    &:hover {
-        box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
-        background: rgba(237, 236, 255, 0.14);
-    }
+    // &:hover {
+    //     box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
+    //     background: rgba(237, 236, 255, 0.14);
+    // }
 
     &.serviceImgChanged {
         box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);

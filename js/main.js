@@ -69,6 +69,7 @@ $(document).ready(() => {
         $(`.services__item`).removeClass('serviceImgChanged');
         let services = document.querySelectorAll('.services__image');
         let showService = event.currentTarget.dataset.id;
+        $(`.services__item[data-id="${showService}"]`).addClass('serviceImgChanged');
         currentImage = showService;
 
         for (let image of services) {
@@ -82,7 +83,7 @@ $(document).ready(() => {
         imageChangedRecently = true;
     });
 
-    $('.services__item span').mouseleave(() => {
+    $('.services__item').mouseleave(() => {
         imageChangedRecently = false;
     });
 

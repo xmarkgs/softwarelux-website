@@ -501,12 +501,6 @@ header .mobile-menu-burger svg rect {
   margin-top: 37px;
 }
 
-.services__item:hover {
-  -webkit-box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
-          box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
-  background: rgba(237, 236, 255, 0.14);
-}
-
 .services__item.serviceImgChanged {
   -webkit-box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
           box-shadow: 0 0 0 16px rgba(237, 236, 255, 0.14);
