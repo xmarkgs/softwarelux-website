@@ -63,7 +63,7 @@ $(document).ready(() => {
     }
     changeImages();
 
-    $('.services__item span').hover((event) => {
+    $('.services__item span').mouseover((event) => {
         $(`.services__item span`).removeClass('serviceImgChanged');
         let services = document.querySelectorAll('.services__image');
         let showService = event.target.dataset.id;
@@ -78,9 +78,10 @@ $(document).ready(() => {
         }
 
         imageChangedRecently = true;
-        setTimeout(() => {
-            imageChangedRecently = false;
-        }, 5000);
+    });
+
+    $('.services__item span').mouseleave(() => {
+        imageChangedRecently = false;
     });
 
     // [3] Contact us modal
