@@ -515,7 +515,6 @@ header .mobile-menu-burger svg rect {
   line-height: 100%;
   font-weight: bold;
   color: white;
-  cursor: default;
   -webkit-transition: .05s;
   transition: .05s;
 }
