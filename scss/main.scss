@@ -694,37 +694,6 @@ header {
             max-width: 1092px;
         }
 
-        .slick-prev {
-            svg {
-                transform: rotate(180deg);
-            }
-        }
-
-        .slick-arrow {
-            width: 72px;
-            height: 72px;
-            border-radius: 100%;
-            background: transparent;
-            border: 2px solid #FFFFFF;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-            transition: .05s;
-            align-self: center;
-
-            svg path {
-                fill: white;
-            }
-
-            &:hover {
-                background: white;
-
-                svg path {
-                    fill: #373F41;
-                }
-            }
-        }
-
         .slick-dots {
             margin-top: 44px;
             width: 100%;
@@ -778,7 +747,61 @@ header {
 }
 
 .for-whom__carousel {
-    margin-top: 32px;
+    width: fit-content;
+    margin: 32px auto 0 auto;
+}
+
+.for-whom__carousel-navigation {
+    margin: 18px auto 0 auto;
+    max-width: 1092px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .for-whom__counter {
+        span {
+            color: white;
+            font-size: 18px;
+        }
+        
+    }
+
+    .for-whom__arrows {
+        display: flex;
+        gap: 16px;
+    }
+
+    .slick-prev {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .slick-arrow {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        background: transparent;
+        border: 2px solid #FFFFFF;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: .05s;
+        align-self: center;
+
+        svg path {
+            fill: white;
+        }
+
+        &:hover {
+            background: white;
+
+            svg path {
+                fill: #373F41;
+            }
+        }
+    }
 }
 
 .for-whom__item {
@@ -1646,13 +1669,14 @@ footer {
 
 // [14] Media
 @media screen and (max-width: 1385px) {
-    .slick-arrow {
-        display: none !important;
-    }
-
     .for-whom__carousel {
+        width: unset;
         flex-direction: column;
         align-items: center;
+    }
+
+    .for-whom__carousel-navigation {
+        max-width: 100%;
     }
 
     .for-whom-section .slick-slider .slick-list {
@@ -1850,11 +1874,17 @@ footer {
         text-align: center;
     }
 
+    .for-whom__carousel-navigation {
+        margin: 24px auto 0 auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+    }
+
     .for-whom__image {
         max-width: 320px;
         margin-left: 0;
         margin-bottom: 32px;
-        ;
     }
 
     .for-whom__tag {
