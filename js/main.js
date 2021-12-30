@@ -266,7 +266,6 @@ $(document).ready(() => {
         for (let element of elements) {
             element.checkValidity() ? null : valid = false;
         }
-        console.log(valid);
         if (valid) {
             $('.contact-us-modal__form #sendContUsForm').removeAttr('disabled');
         } else {
