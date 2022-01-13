@@ -2793,6 +2793,7 @@ footer {
 
 .open-position:hover {
   background: #9E99E3;
+  border-color: #9E99E3;
 }
 
 .open-position:hover h3,
