@@ -4,6 +4,8 @@ File structure:
 1. Fonts
 2. Default rules
 3. Header
+
+--Main page--
 4. Intro section
 5. Service we offer section
 6. How we work section
@@ -16,6 +18,15 @@ File structure:
 13. Contact us modal
 14. Media
 15. Mobile menu
+
+--Careers page--
+16. Who we are section
+17. Open positions section
+18. Media
+
+--Open position page--
+19. Position description
+20. Media
 
 */
 
@@ -374,7 +385,6 @@ header {
     &:hover {
         background: white;
         color: #222A5A;
-        // outline: 2px solid #222A5A;
 
         svg {
             transform: translateX(4px);
@@ -382,6 +392,21 @@ header {
 
         svg path {
             fill: #222A5A;
+        }
+    }
+
+    &.btn--quote--dark-hover {
+        &:hover {
+            background: #9E99E3;
+            color: white;
+
+            svg {
+                transform: translateX(4px);
+            }
+
+            svg path {
+                fill: white;
+            }
         }
     }
 }
@@ -485,7 +510,8 @@ header {
             opacity: 0;
         }
 
-        &:hover, &.serviceImgChanged {
+        &:hover,
+        &.serviceImgChanged {
 
             &::before {
                 right: 100%;
@@ -764,7 +790,7 @@ header {
             color: white;
             font-size: 18px;
         }
-        
+
     }
 
     .for-whom__arrows {
@@ -2447,3 +2473,198 @@ footer {
         padding: 32px 32px 32px 24px;
     }
 }
+
+// [16] Who we are section
+.services-section--careers__content {
+    max-width: 1200px;
+    width: 100%;
+
+    .section__title {
+        color: white;
+    }
+}
+
+.services-section--careers__info {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        max-width: 580px;
+        font-weight: 300;
+        font-size: 24px;
+        color: white;
+    }
+
+    img {
+        margin-left: 24px;
+        flex-shrink: 0;
+    }
+}
+
+// [17] Open positions section
+.open-positions-section {
+    padding: 80px 12px;
+}
+
+.open-positions-section__content {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.open-positions__table {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.open-position {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 24px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background: white;
+    text-decoration: none;
+    color: black;
+    transition: .1s;
+
+    h3 {
+        color: black;
+        font-size: 22px;
+        line-height: 109%;
+        text-transform: uppercase;
+        padding-right: 60px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 150%;
+        color: #373F41;
+        padding-right: 60px;
+    }
+
+    &:hover {
+        background: #9E99E3;
+
+        h3,
+        p,
+        .open-position__tags span {
+            color: white;
+        }
+    }
+}
+
+.open-position__arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #9E99E3;
+    border-radius: 100%;
+
+    img {
+        width: 26px;
+        filter: brightness(0) #{"invert()"};
+    }
+}
+
+.open-position__tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        color: #373F41;
+    }
+}
+
+// [18] Media
+
+@media screen and (max-width: 1024px) {
+    .services-section--careers__info {
+        p {
+            max-width: 450px;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .services-section--careers__info {
+        flex-direction: column-reverse;
+
+        p {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+// [19] Position description
+.open-position-description-section {
+    padding: 80px 12px;
+}
+
+.open-position-description__info {
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-weight: bold;
+        font-size: 32px;
+        color: black;
+        margin-bottom: 16px;
+    }
+}
+
+.open-position-description__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.open-position-description__item {
+    display: flex;
+    margin-bottom: 4px;
+
+    span {
+        font-size: 16px;
+        color: black;
+    }
+}
+
+.open-position-description__marker {
+    width: 6px;
+    height: 6px;
+    background: #373F41;
+    border-radius: 100%;
+    flex-shrink: 0;
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+
+// [20] Media

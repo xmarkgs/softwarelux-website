@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS5NC7BP9W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZS5NC7BP9W');
+    </script>
+    <title>Middle Front-End Developer - Careers - SoftwareLux</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Open graph -->
+    <link rel="icon" href="/assets/images/icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SoftwareLux">
+    <meta property="og:title" content="Custom software development company| SoftwareLux">
+    <meta property="og:url" content="https://softwarelux.com/">
+    <meta property="og:image" content="https://softwarelux.com/images/link-placeholder.png">
+    <meta property="og:description"
+        content="SoftwareLux provides full-cycle software engineering outsourcing services and helps businesses successfully solve complex digital challenges">
+    <meta name="description"
+        content="SoftwareLux provides full-cycle software engineering outsourcing services and helps businesses successfully solve complex digital challenges">
+    <link rel="canonical" href="https://softwarelux.com/index.html" />
+    <!-- Website styles -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/slick/slick.css" />
+    <!-- Animate.css https://animate.style/ -->
+    <link rel="stylesheet" href="/assets/plugins/animate/animate.min.css" />
+</head>
+
+<body>
+    <!-- Contact us Modal -->
+    <div class="contact-us-modal">
+        <div class="contact-us-modal__content">
+            <div class="modal-close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 1.61143L14.3886 0L8 6.38857L1.61143 0L0 1.61143L6.38857 8L0 14.3886L1.61143 16L8 9.61143L14.3886 16L16 14.3886L9.61143 8L16 1.61143Z"
+                        fill="#151F2B" />
+                </svg>
+            </div>
+            <div class="contact-us-modal--initial">
+                <h2 class="modal__title">want to start a project?</h2>
+                <p class="modal__description">
+                    Reach out to our development team for a free project call.
+                    Let’s discuss your idea and turn it into a competitive digital&nbsp;product.
+                </p>
+                <form class="contact-us-modal__form" method="post">
+                    <label>
+                        <span>Name<em>*</em></span>
+                        <input required type="text" placeholder="Type here" name="name">
+                    </label>
+                    <label>
+                        <span>Email<em>*</em></span>
+                        <input required type="email" placeholder="Type here" name="email">
+                    </label>
+                    <label>
+                        <span>How can we help you<em>*</em></span>
+                        <textarea required name="message" placeholder="Type here"></textarea>
+                    </label>
+                    <!-- <label class="checkbox-label">
+                        <input type="checkbox" name="privacy" checked required>
+                        <span class="checkmark"></span>
+                        <p>I agree to Privacy Policy<em>*</em></p>
+                    </label> -->
+                    <p>We`ll get back to you within 24 business hours.</p>
+                    <div class="form__buttons">
+                        <button id="cancelForm">cancel</button>
+                        <button type="submit" id="sendContUsForm" disabled>get in touch</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-us-modal--progress display--none">
+                <img src="/assets/videos/circles-loader.gif" alt="">
+            </div>
+            <div class="contact-us-modal--result display--none">
+                <h3>Thanks for your message!</h3>
+                <p>We'll reach out to you as soon as possible.</p>
+            </div>
+            <div class="contact-us-modal--error display--none">
+                <h3>Oopsie!</h3>
+                <p>An error happened while sending the message. Please try again a bit later or contact us via <a
+                        href="mailto:hello@softwarelux.com">hello@softwarelux.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__close closeMobileMenu">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0 14.1421)" fill="white" />
+                    <rect x="1.41431" width="20" height="2" rx="1" transform="rotate(45 1.41431 0)" fill="white" />
+                </svg>
+            </div>
+            <nav class="header__nav">
+                <a href="#services-section" class="menu-link"><span>Services</span></a>
+                <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
+                <a href="#industries-section" class="menu-link"><span>Industries</span></a>
+                <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <button class="btn--contact-us openContactModal">Contact us
+                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </nav>
+            <a class="mobile-menu__mail" href="mailto:hello@softwarelux.com">hello@softwarelux.com</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header--top">
+        <div class="content header__content">
+            <a href="/">
+                <img src="/assets/images/softwarelux_logo.svg" alt="" class="website-logo">
+            </a>
+            <nav class="header__nav">
+                <a href="#services-section" class="menu-link"><span>Services</span></a>
+                <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
+                <a href="#industries-section" class="menu-link"><span>Industries</span></a>
+                <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <button class="btn--contact-us openContactModal">Contact us
+                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </nav>
+            <div class="mobile-menu-burger openMobileMenu">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" rx="1" fill="white" />
+                    <rect y="6" width="20" height="2" rx="1" fill="white" />
+                    <rect y="12" width="20" height="2" rx="1" fill="white" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="intro-section" id="intro-section">
+            <div class="content intro-section__content">
+                <div class="intro__text animateOnScroll" data-animation="animate__fadeIn">
+                    <h1>Middle Front-End Developer</h1>
+                    <p>
+                        We are opening the position of Middle Front-End Developer to extend the project. Edvantis
+                        cooperate with US customers and develops/extends the Wi-Fi certification system for Wi-Fi
+                        Alliance. Wi-Fi Alliance is a worldwide network of companies that offers you Wi-Fi, one of the
+                        most valuable communication technologies in the world. Their vision is to connect everyone and
+                        everything, everywhere.
+                    </p>
+                </div>
+                <a href="#scroll-down" class="scroll-down" id="scroll-down"></a>
+            </div>
+            <video loop autoplay muted playsinline>
+                <source src="/assets/videos/pexels-rostislav-uzunov-6977979.mp4">
+            </video>
+        </section>
+        <div class="open-position-description-section">
+            <div class="content open-position-description-section__content">
+                <div class="open-position-description__info">
+                    <h2>Responsibilites</h2>
+                    <div class="open-position-description__list">
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Developing new software features with React, working independently and as a part of a
+                                team</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Implementing new and improving existing functionality following high-level business
+                                requirements</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Participating in daily short meetings within local and international teams (from Thai,
+                                USA)</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Constantly self-improving and staying up to date with the best coding practices</span>
+                        </div>
+                    </div>
+                    <h2>Requirements</h2>
+                    <div class="open-position-description__list">
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>3+ years of experience with TypeScript and React</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Experience with Redux, Redux-Saga</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Code refactoring knowledge (includes various areas, from overall code improvements to
+                                component replacement)</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Improving existing features occasional implementation of new functionality
+                                experience</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Being familiar with testing using Jest and familiar with Material-UI (optional)</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Knowledge of Axios</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Practical experience with GitHub, JIRA</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Have a large willing to learn</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>English level – Intermediate or higher</span>
+                        </div>
+                    </div>
+                    <h2>We offer</h2>
+                    <div class="open-position-description__list">
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Career and professional growth</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Сompetitive salary</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Friendly and highly professional teams</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Big and comfortable office, own parking area, restaurants nearby</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Medical insurance coverage for employees (Сovid-19 included), plus an option for
+                                family insurance coverage at a corporate rate</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Paid 12 sick leaves and all holidays</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Paid 18 working vacation days</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>English/German language courses</span>
+                        </div>
+                        <div class="open-position-description__item">
+                            <div class="open-position-description__marker"></div>
+                            <span>Comfortable office facilities (kitchens, coffee/tea points)</span>
+                        </div>
+                    </div>
+                    <button class="btn--quote btn--quote--dark-hover openCVModal">
+                        <span>apply now</span>
+                        <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="connect-experts animateOnScroll" data-animation="animate__fadeIn">
+        <h2>can't find a good role?</h2>
+        <button class="btn--touch openCVModal">
+            <span>upload your cv</span>
+            <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989593 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z"
+                    fill="white" />
+            </svg>
+        </button>
+    </div>
+    <footer>
+        <div class="content footer__content animateOnScroll" data-animation="animate__fadeIn">
+            <div class="footer__top">
+                <img src="/assets/images/softwarelux_logo.svg" alt="" class="website-logo">
+                <nav class="header__nav">
+                    <a href="#services-section" class="menu-link"><span>Services</span></a>
+                    <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
+                    <a href="#industries-section" class="menu-link"><span>Industries</span></a>
+                    <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p>Copyright &copy; 2022 SoftwareLux</p>
+                <a href="mailto:hello@softwarelux.com">hello@softwarelux.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Main Script -->
+    <script src="/assets/js/main.js"></script>
+
+    <!-- Slick carousel -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- AJAX form -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
