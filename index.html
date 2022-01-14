@@ -40,8 +40,8 @@
 
 <body>
     <!-- Contact us Modal -->
-    <div class="contact-us-modal">
-        <div class="contact-us-modal__content">
+    <div class="modal contact-us-modal">
+        <div class="modal__content contact-us-modal__content">
             <div class="modal-close">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -75,7 +75,7 @@
                     </label> -->
                     <p>We`ll get back to you within 24 business hours.</p>
                     <div class="form__buttons">
-                        <button id="cancelForm">cancel</button>
+                        <button class="cancelForm" data-form="contact-us-modal" data-submitbtnid="sendContUsForm">cancel</button>
                         <button type="submit" id="sendContUsForm" disabled>get in touch</button>
                     </div>
                 </form>
@@ -89,7 +89,8 @@
             </div>
             <div class="contact-us-modal--error display--none">
                 <h3>Oopsie!</h3>
-                <p>An error happened while sending the message. Please try again a bit later or contact us via <a href="mailto:hello@softwarelux.com">hello@softwarelux.com</a></p>
+                <p>An error happened while sending the message. Please try again a bit later or contact us via <a
+                        href="mailto:hello@softwarelux.com">hello@softwarelux.com</a></p>
             </div>
         </div>
     </div>
