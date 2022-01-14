@@ -40,8 +40,8 @@
 
 <body>
     <!-- Contact us Modal -->
-    <div class="contact-us-modal">
-        <div class="contact-us-modal__content">
+    <div class="modal contact-us-modal">
+        <div class="modal__content contact-us-modal__content">
             <div class="modal-close">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -75,7 +75,7 @@
                     </label> -->
                     <p>We`ll get back to you within 24 business hours.</p>
                     <div class="form__buttons">
-                        <button id="cancelForm">cancel</button>
+                        <button class="cancelForm" data-form="contact-us-modal" data-submitbtnid="sendContUsForm">cancel</button>
                         <button type="submit" id="sendContUsForm" disabled>get in touch</button>
                     </div>
                 </form>
@@ -95,6 +95,20 @@
         </div>
     </div>
 
+    <!-- CV Modal -->
+    <div class="modal cv-modal openCVModal">
+        <div class="modal__content cv-modal__content">
+            <div class="modal-close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 1.61143L14.3886 0L8 6.38857L1.61143 0L0 1.61143L6.38857 8L0 14.3886L1.61143 16L8 9.61143L14.3886 16L16 14.3886L9.61143 8L16 1.61143Z"
+                        fill="#151F2B" />
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Mobile menu -->
     <div class="mobile-menu">
         <div class="mobile-menu__content">
@@ -105,10 +119,11 @@
                 </svg>
             </div>
             <nav class="header__nav">
-                <a href="#services-section" class="menu-link"><span>Services</span></a>
-                <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
-                <a href="#industries-section" class="menu-link"><span>Industries</span></a>
-                <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <a href="/#services-section" class="menu-link"><span>Services</span></a>
+                <a href="/#how-work-section" class="menu-link"><span>How we work</span></a>
+                <a href="/#industries-section" class="menu-link"><span>Industries</span></a>
+                <a href="/#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <a href="/careers" class="menu-link"><span>Careers</span></a>
                 <button class="btn--contact-us openContactModal">Contact us
                     <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -128,10 +143,11 @@
                 <img src="/assets/images/softwarelux_logo.svg" alt="" class="website-logo">
             </a>
             <nav class="header__nav">
-                <a href="#services-section" class="menu-link"><span>Services</span></a>
-                <a href="#how-work-section" class="menu-link"><span>How we work</span></a>
-                <a href="#industries-section" class="menu-link"><span>Industries</span></a>
-                <a href="#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <a href="/#services-section" class="menu-link"><span>Services</span></a>
+                <a href="/#how-work-section" class="menu-link"><span>How we work</span></a>
+                <a href="/#industries-section" class="menu-link"><span>Industries</span></a>
+                <a href="/#technologies-section" class="menu-link"><span>Technologies</span></a>
+                <a href="/careers" class="menu-link"><span>Careers</span></a>
                 <button class="btn--contact-us openContactModal">Contact us
                     <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

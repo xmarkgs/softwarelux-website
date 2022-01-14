@@ -1471,6 +1471,7 @@ header .mobile-menu-burger svg rect {
   letter-spacing: 0.1px;
   text-transform: uppercase;
   color: white;
+  text-align: center;
 }
 
 .btn--touch {
@@ -1625,7 +1626,7 @@ footer {
   overflow: hidden;
 }
 
-.contact-us-modal {
+.modal {
   z-index: 1000;
   top: 0;
   bottom: 0;
@@ -1645,17 +1646,17 @@ footer {
   transition: .1s;
 }
 
-.contact-us-modal.active {
+.modal.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact-us-modal.changeModalOpacity {
+.modal.changeModalOpacity {
   opacity: 1;
 }
 
-.contact-us-modal__content {
+.modal__content {
   position: relative;
   max-width: 528px;
   min-height: 100px;
@@ -1923,7 +1924,7 @@ footer {
   margin-top: 32px;
 }
 
-.contact-us-modal__form .form__buttons #cancelForm {
+.contact-us-modal__form .form__buttons .cancelForm {
   background: transparent;
   border: 2px solid #373F41;
   border-radius: 8px;
@@ -1938,7 +1939,7 @@ footer {
   cursor: pointer;
 }
 
-.contact-us-modal__form .form__buttons #cancelForm:hover {
+.contact-us-modal__form .form__buttons .cancelForm:hover {
   background: #373F41;
   color: white;
 }
@@ -2322,7 +2323,7 @@ footer {
   .contact-us-modal__form p {
     font-size: 14px;
   }
-  .contact-us-modal__form .form__buttons #cancelForm {
+  .contact-us-modal__form .form__buttons .cancelForm {
     font-size: 14px;
   }
   header .website-logo {
@@ -2596,6 +2597,7 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin: 12px 0;
 }
 
 .mobile-menu__content .header__nav .menu-link {
@@ -2781,14 +2783,14 @@ footer {
   font-size: 22px;
   line-height: 109%;
   text-transform: uppercase;
-  padding-right: 60px;
+  padding-right: 36px;
 }
 
 .open-position p {
   font-size: 16px;
   line-height: 150%;
   color: #373F41;
-  padding-right: 60px;
+  padding-right: 36px;
 }
 
 .open-position:hover {
@@ -2861,6 +2863,9 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+  .open-positions-section {
+    padding: 40px 24px;
+  }
   .services-section--careers__info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -2873,6 +2878,13 @@ footer {
   .services-section--careers__info img {
     width: 100%;
     margin-left: 0;
+  }
+  .open-positions__table {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .open-position p {
+    padding-right: 0;
   }
 }
 
@@ -2930,4 +2942,13 @@ footer {
       flex-shrink: 0;
   margin-top: 6px;
   margin-right: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .open-position-description-section {
+    padding: 40px 24px;
+  }
+  .open-position-description__info h2 {
+    font-size: 22px;
+  }
 }

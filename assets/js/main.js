@@ -3,7 +3,7 @@
 File structure:
 1. For whom carousel
 2. Services change image
-3. Contact us modal
+3. Modals
 4. Header change
 5. Mobile menu
 6. Scheme item node responsive
@@ -100,7 +100,7 @@ $(document).ready(() => {
             imageChangedRecently = false;
     });
 
-    // [3] Contact us modal
+    // [3] Modals
     function getScrollbarWidth() {
         var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
         $('body').append(div);
@@ -111,55 +111,66 @@ $(document).ready(() => {
         return (w1 - w2);
     }
 
-    function hideModal() {
+    function hideModal(form, submitBtnID) {
         changeScrollPadding(false);
-        $('body').removeClass('no-scroll');
-        $('.contact-us-modal').removeClass('active');
-        $('.contact-us-modal').removeClass('changeModalOpacity');
-        $('.contact-us-modal--progress').addClass('display--none');
-        $('.contact-us-modal--result').addClass('display--none');
-        $('.contact-us-modal--error').addClass('display--none');
-        $('.contact-us-modal--initial').removeClass('display--none');
-        $('.contact-us-modal__form input, .contact-us-modal__form textarea').val('');
-        $('.contact-us-modal__form #sendContUsForm').attr('disabled', true);
+        
+        $(`.${form}`).removeClass('active');
+        $(`.${form}`).removeClass('changeModalOpacity');
+        $(`.${form}--progress`).addClass('display--none');
+        $(`.${form}--result`).addClass('display--none');
+        $(`.${form}--error`).addClass('display--none');
+        $(`.${form}--initial`).removeClass('display--none');
+        $(`.${form}__form input, .${form}__form textarea`).val('');
+        $(`.${form}__form #${submitBtnID}`).attr('disabled', true);
+    }
+
+    function showModal(form) {
+        changeScrollPadding(true);
+        $(`.${form}`).addClass('active');
+        setTimeout(() => {
+            $(`.${form}`).addClass('changeModalOpacity');
+        }, 10);
+
+        $(`.${form}`).click(() => {
+            hideModal(form, $(`.cancelForm[data-form="${form}"]`).data('submitbtnid'));
+        });
+
+        $(`.${form}__content`).click((event) => {
+            event.stopPropagation();
+        });
+
+        $('.modal-close').click(() => {
+            hideModal(form, $(`.cancelForm[data-form="${form}"]`).data('submitbtnid'));
+        });
     }
 
     function changeScrollPadding(option) {
         if (option) {
+            $('body').addClass('no-scroll');
             $('body').css('padding-right', `${getScrollbarWidth()}px`);
             $('header').css('width', `calc(100% - ${getScrollbarWidth()}px)`);
         } else {
+            $('body').removeClass('no-scroll');
             $('body').css('padding-right', `0`);
             $('header').css('width', `100%`);
         }
     }
 
-    $('.openContactModal').click((event) => {
+    $('.cancelForm').click((event) => {
         event.preventDefault();
-
-        changeScrollPadding(true);
-        $('body').addClass('no-scroll');
-        $('.contact-us-modal').addClass('active');
-        setTimeout(() => {
-            $('.contact-us-modal').addClass('changeModalOpacity');
-        }, 10);
-
-        $('.contact-us-modal').click(() => {
-            hideModal();
-        });
-
-        $('.contact-us-modal__content').click((event) => {
-            event.stopPropagation();
-        });
-
-        $('.modal-close').click((event) => {
-            hideModal();
-        });
+        hideModal(event.target.dataset.form, event.target.dataset.submitbtnid);
     });
 
-    $('#cancelForm').click((event) => {
+    // Contact us modal init
+    $('.openContactModal').click((event) => {
         event.preventDefault();
-        hideModal();
+        showModal('contact-us-modal');
+    });
+
+    // CV modal init
+    $('.openCVModal').click((event) => {
+        event.preventDefault();
+        showModal('cv-modal');
     });
 
     // [4] Header change
