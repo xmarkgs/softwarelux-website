@@ -1710,7 +1710,7 @@ footer {
   color: #373F41;
 }
 
-.contact-us-modal__form {
+.modal__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1721,7 +1721,7 @@ footer {
   margin-top: 24px;
 }
 
-.contact-us-modal__form label {
+.modal__form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1732,18 +1732,18 @@ footer {
   margin-bottom: 16px;
 }
 
-.contact-us-modal__form label span {
+.modal__form label span {
   color: #373F41;
   font-weight: bold;
   margin-bottom: 6px;
 }
 
-.contact-us-modal__form label em {
+.modal__form label em {
   color: red;
 }
 
-.contact-us-modal__form label input[type="text"],
-.contact-us-modal__form label input[type="email"] {
+.modal__form label input[type="text"],
+.modal__form label input[type="email"] {
   font-size: 16px;
   padding: 10px;
   background: #FFFFFF;
@@ -1757,35 +1757,35 @@ footer {
   transition: .05s;
 }
 
-.contact-us-modal__form label input[type="text"]::-webkit-input-placeholder,
-.contact-us-modal__form label input[type="email"]::-webkit-input-placeholder {
+.modal__form label input[type="text"]::-webkit-input-placeholder,
+.modal__form label input[type="email"]::-webkit-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label input[type="text"]:-ms-input-placeholder,
-.contact-us-modal__form label input[type="email"]:-ms-input-placeholder {
+.modal__form label input[type="text"]:-ms-input-placeholder,
+.modal__form label input[type="email"]:-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label input[type="text"]::-ms-input-placeholder,
-.contact-us-modal__form label input[type="email"]::-ms-input-placeholder {
+.modal__form label input[type="text"]::-ms-input-placeholder,
+.modal__form label input[type="email"]::-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label input[type="text"]::placeholder,
-.contact-us-modal__form label input[type="email"]::placeholder {
+.modal__form label input[type="text"]::placeholder,
+.modal__form label input[type="email"]::placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label input[type="text"]:focus,
-.contact-us-modal__form label input[type="email"]:focus {
+.modal__form label input[type="text"]:focus,
+.modal__form label input[type="email"]:focus {
   border: 0;
   outline: 0;
   -webkit-box-shadow: 0 0 0 2px #9E99E3;
           box-shadow: 0 0 0 2px #9E99E3;
 }
 
-.contact-us-modal__form label textarea {
+.modal__form label textarea {
   font-size: 16px;
   min-height: 82px;
   max-height: 140px;
@@ -1802,30 +1802,30 @@ footer {
   resize: vertical;
 }
 
-.contact-us-modal__form label textarea::-webkit-input-placeholder {
+.modal__form label textarea::-webkit-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label textarea:-ms-input-placeholder {
+.modal__form label textarea:-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label textarea::-ms-input-placeholder {
+.modal__form label textarea::-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label textarea::placeholder {
+.modal__form label textarea::placeholder {
   color: #bdbdbd;
 }
 
-.contact-us-modal__form label textarea:focus {
+.modal__form label textarea:focus {
   border: 0;
   outline: 0;
   -webkit-box-shadow: 0 0 0 2px #9E99E3;
           box-shadow: 0 0 0 2px #9E99E3;
 }
 
-.contact-us-modal__form .checkbox-label {
+.modal__form .checkbox-label {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1849,7 +1849,7 @@ footer {
   /* Style the checkmark/indicator */
 }
 
-.contact-us-modal__form .checkbox-label input {
+.modal__form .checkbox-label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -1857,7 +1857,7 @@ footer {
   width: 0;
 }
 
-.contact-us-modal__form .checkbox-label .checkmark {
+.modal__form .checkbox-label .checkmark {
   position: absolute;
   top: 2px;
   left: 0;
@@ -1871,26 +1871,26 @@ footer {
   transition: .05s;
 }
 
-.contact-us-modal__form .checkbox-label input:hover ~ .checkmark {
+.modal__form .checkbox-label input:hover ~ .checkmark {
   background-color: #BDBDBD;
 }
 
-.contact-us-modal__form .checkbox-label input:checked ~ .checkmark {
+.modal__form .checkbox-label input:checked ~ .checkmark {
   border: 2px solid #9E99E3;
   background-color: #9E99E3;
 }
 
-.contact-us-modal__form .checkbox-label .checkmark:after {
+.modal__form .checkbox-label .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.contact-us-modal__form .checkbox-label input:checked ~ .checkmark:after {
+.modal__form .checkbox-label input:checked ~ .checkmark:after {
   display: block;
 }
 
-.contact-us-modal__form .checkbox-label .checkmark:after {
+.modal__form .checkbox-label .checkmark:after {
   left: 4px;
   top: 1px;
   width: 3px;
@@ -1901,20 +1901,73 @@ footer {
   transform: rotate(45deg);
 }
 
-.contact-us-modal__form .checkbox-label p {
+.modal__form .checkbox-label p {
   margin-left: 26px;
   font-size: 16px;
   line-height: 137%;
   color: black;
 }
 
-.contact-us-modal__form p {
+.modal__form .cv-upload-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  color: #373F41;
+}
+
+.modal__form .cv-upload-label input {
+  display: none;
+}
+
+.modal__form .cv-upload-label .file-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.modal__form .cv-upload-label .file-select {
+  padding: 8px 16px;
+  border: 1px solid #222A5A;
+  border-radius: 8px;
+  color: #222A5A;
+  -webkit-transition: .1s;
+  transition: .1s;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.modal__form .cv-upload-label .file-select:hover {
+  background: #222A5A;
+  color: white;
+}
+
+.modal__form .cv-upload-label .file-info-js {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-break: break-all;
+  font-size: 14px;
+}
+
+.modal__form p {
   font-size: 16px;
   line-height: 137%;
   color: #373F41;
 }
 
-.contact-us-modal__form .form__buttons {
+.modal__form .form__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1924,7 +1977,7 @@ footer {
   margin-top: 32px;
 }
 
-.contact-us-modal__form .form__buttons .cancelForm {
+.modal__form .form__buttons .cancelForm {
   background: transparent;
   border: 2px solid #373F41;
   border-radius: 8px;
@@ -1939,12 +1992,12 @@ footer {
   cursor: pointer;
 }
 
-.contact-us-modal__form .form__buttons .cancelForm:hover {
+.modal__form .form__buttons .cancelForm:hover {
   background: #373F41;
   color: white;
 }
 
-.contact-us-modal__form .form__buttons #sendContUsForm {
+.modal__form .form__buttons .btn--form-submit {
   border-radius: 8px;
   padding: 16px 24px;
   font-size: 16px;
@@ -1959,11 +2012,11 @@ footer {
   cursor: pointer;
 }
 
-.contact-us-modal__form .form__buttons #sendContUsForm:not(:disabled):hover {
+.modal__form .form__buttons .btn--form-submit:not(:disabled):hover {
   background: #9E99E3;
 }
 
-.contact-us-modal__form .form__buttons #sendContUsForm:disabled {
+.modal__form .form__buttons .btn--form-submit:disabled {
   cursor: not-allowed;
   background: #373F41;
 }
@@ -2298,32 +2351,32 @@ footer {
     margin-top: 8px;
     font-size: 12px;
   }
-  .contact-us-modal__form label {
+  .modal__form label {
     margin-bottom: 8px;
   }
-  .contact-us-modal__form label span {
+  .modal__form label span {
     font-size: 12px;
   }
-  .contact-us-modal__form label input[type="text"],
-  .contact-us-modal__form label input[type="email"] {
+  .modal__form label input[type="text"],
+  .modal__form label input[type="email"] {
     font-size: 12px;
     padding: 8px;
   }
-  .contact-us-modal__form label textarea {
+  .modal__form label textarea {
     font-size: 12px;
     padding: 8px;
     resize: none;
   }
-  .contact-us-modal__form .checkbox-label .checkmark {
+  .modal__form .checkbox-label .checkmark {
     top: 0;
   }
-  .contact-us-modal__form .checkbox-label p {
+  .modal__form .checkbox-label p {
     font-size: 12px;
   }
-  .contact-us-modal__form p {
+  .modal__form p {
     font-size: 14px;
   }
-  .contact-us-modal__form .form__buttons .cancelForm {
+  .modal__form .form__buttons .cancelForm {
     font-size: 14px;
   }
   header .website-logo {

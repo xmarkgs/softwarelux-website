@@ -102,11 +102,11 @@ $(document).ready(() => {
 
     // [3] Modals
     function getScrollbarWidth() {
-        var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+        let div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
         $('body').append(div);
-        var w1 = $('div', div).innerWidth();
+        let w1 = $('div', div).innerWidth();
         div.css('overflow-y', 'scroll');
-        var w2 = $('div', div).innerWidth();
+        let w2 = $('div', div).innerWidth();
         $(div).remove();
         return (w1 - w2);
     }
@@ -166,12 +166,14 @@ $(document).ready(() => {
         event.preventDefault();
         showModal('contact-us-modal');
     });
+    addSubmitBtnReactiveness('contact-us-modal', 'sendContUsForm');
 
     // CV modal init
     $('.openCVModal').click((event) => {
         event.preventDefault();
         showModal('cv-modal');
     });
+    addSubmitBtnReactiveness('cv-modal', 'sendCVForm');
 
     // [4] Header change
     $(document).scroll(() => {
@@ -271,16 +273,23 @@ $(document).ready(() => {
     });
 
     // [9] Form submit-btn reactiveness
-    $('.contact-us-modal__form input, .contact-us-modal__form textarea').on('input', () => {
-        let elements = document.querySelectorAll('.contact-us-modal__form input, .contact-us-modal__form textarea');
-        let valid = true;
-        for (let element of elements) {
-            element.checkValidity() ? null : valid = false;
-        }
-        if (valid) {
-            $('.contact-us-modal__form #sendContUsForm').removeAttr('disabled');
-        } else {
-            $('.contact-us-modal__form #sendContUsForm').attr('disabled', true);
-        }
-    });
+    function addSubmitBtnReactiveness(form, submitBtnID) {
+        $(`.${form} .modal__form input, .${form} .modal__form textarea`).on('input', () => {
+            let elements = document.querySelectorAll(`.${form} .modal__form input, .${form} .modal__form textarea`);
+            let valid = true;
+            for (let element of elements) {
+                element.checkValidity() ? null : valid = false;
+            }
+            if (valid) {
+                $(`.${form} .modal__form #${submitBtnID}`).removeAttr('disabled');
+            } else {
+                $(`.${form} .modal__form #${submitBtnID}`).attr('disabled', true);
+            }
+        });
+        $(`.${form} .modal__form #cv-upload-js`).on('input', (event) => {
+            $(`.${form} .modal__form .file-info-js`).text(event.currentTarget.value)
+        });
+    }
+
+
 });

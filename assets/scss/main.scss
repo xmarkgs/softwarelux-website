@@ -1495,7 +1495,7 @@ footer {
     color: #373F41;
 }
 
-.contact-us-modal__form {
+.modal__form {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
@@ -1639,6 +1639,44 @@ footer {
         }
     }
 
+    .cv-upload-label {
+        display: flex;
+        cursor: pointer;
+        color: #373F41;
+
+        input {
+            display: none;
+        }
+
+        .file-input {
+            display: flex;
+            column-gap: 8px;
+        }
+
+        .file-select {
+            padding: 8px 16px;
+            border: 1px solid #222A5A;
+            border-radius: 8px;
+            color: #222A5A;
+            transition: .1s;
+            flex-shrink: 0;
+            flex-grow: 0;
+            height: fit-content;
+
+            &:hover {
+                background: #222A5A;
+                color: white;
+            }
+        }
+
+        .file-info-js {
+            display: flex;
+            align-items: center;
+            word-break: break-all;            
+            font-size: 14px;
+        }
+    }
+
     p {
         font-size: 16px;
         line-height: 137%;
@@ -1669,7 +1707,7 @@ footer {
             }
         }
 
-        #sendContUsForm {
+        .btn--form-submit {
             border-radius: 8px;
             padding: 16px 24px;
             font-size: 16px;
@@ -2036,7 +2074,7 @@ footer {
         font-size: 12px;
     }
 
-    .contact-us-modal__form {
+    .modal__form {
         label {
             margin-bottom: 8px;
 

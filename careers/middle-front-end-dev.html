@@ -55,7 +55,7 @@
                     Reach out to our development team for a free project call.
                     Let’s discuss your idea and turn it into a competitive digital&nbsp;product.
                 </p>
-                <form class="contact-us-modal__form" method="post">
+                <form class="modal__form" method="post">
                     <label>
                         <span>Name<em>*</em></span>
                         <input required type="text" placeholder="Type here" name="name">
@@ -76,7 +76,7 @@
                     <p>We`ll get back to you within 24 business hours.</p>
                     <div class="form__buttons">
                         <button class="cancelForm" data-form="contact-us-modal" data-submitbtnid="sendContUsForm">cancel</button>
-                        <button type="submit" id="sendContUsForm" disabled>get in touch</button>
+                        <button class="btn--form-submit" type="submit" id="sendContUsForm" disabled>get in touch</button>
                     </div>
                 </form>
             </div>
@@ -105,7 +105,55 @@
                         fill="#151F2B" />
                 </svg>
             </div>
-            
+            <div class="cv-modal--initial">
+                <h2 class="modal__title">let's work together!</h2>
+                <p class="modal__description">
+                    Send your application via the form below and we will make sure to review as soon as possible.
+                </p>
+                <form class="modal__form" method="post">
+                    <label>
+                        <span>Name<em>*</em></span>
+                        <input required type="text" placeholder="Type here" name="name">
+                    </label>
+                    <label>
+                        <span>Email<em>*</em></span>
+                        <input required type="email" placeholder="Type here" name="email">
+                    </label>
+                    <label>
+                        <span>Notes</span>
+                        <textarea name="message" placeholder="Type here"></textarea>
+                    </label>
+                    <!-- <label class="checkbox-label">
+                        <input type="checkbox" name="privacy" checked required>
+                        <span class="checkmark"></span>
+                        <p>I agree to Privacy Policy<em>*</em></p>
+                    </label> -->
+                    <label class="cv-upload-label" for="cv-upload-js">
+                        <span>Upload CV file<em>*</em></span>
+                        <input required type="file" name="cv-upload" id="cv-upload-js">
+                        <div class="file-input">
+                            <div class="file-select">Select file</div>
+                            <div class="file-info-js"></div>
+                        </div>
+                    </label>
+                    <div class="form__buttons">
+                        <button class="cancelForm" data-form="contact-us-modal" data-submitbtnid="sendContUsForm">cancel</button>
+                        <button class="btn--form-submit" type="submit" id="sendCVForm" disabled>get in touch</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cv-modal--progress display--none">
+                <img src="/assets/videos/circles-loader.gif" alt="">
+            </div>
+            <div class="cv-modal--result display--none">
+                <h3>Thanks for your message!</h3>
+                <p>We'll reach out to you as soon as possible.</p>
+            </div>
+            <div class="cv-modal--error display--none">
+                <h3>Oopsie!</h3>
+                <p>An error happened while sending the message. Please try again a bit later or contact us via <a
+                        href="mailto:hello@softwarelux.com">hello@softwarelux.com</a></p>
+            </div>
         </div>
     </div>
 
